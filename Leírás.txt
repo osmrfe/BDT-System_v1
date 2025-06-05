@@ -1,0 +1,1223 @@
+klima.html :
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klímaszerelés Profiktól - Portfólió</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+<body>
+
+    <header role="banner" class="site-header">
+        <nav class="sticky-nav" aria-label="Fő navigáció">
+            <div class="logo">
+                <a href="#hero">Klíma<span>Mester</span></a>
+            </div>
+            <ul id="primary-navigation">
+                <li><a href="#hero" class="active">Kezdőlap</a></li>
+                <li><a href="#services">Szolgáltatások</a></li>
+                <li><a href="#portfolio">Referenciák</a></li>
+                <li><a href="#about">Rólunk</a></li>
+                <li><a href="#contact">Kapcsolat</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menü</span>
+                <svg class="hamburger-icon" viewBox="0 0 100 80" width="25" height="25" fill="#0077cc">
+                    <rect width="100" height="15" rx="8"></rect>
+                    <rect y="30" width="100" height="15" rx="8"></rect>
+                    <rect y="60" width="100" height="15" rx="8"></rect>
+                </svg>
+                 <svg class="close-icon" viewBox="0 0 100 100" width="25" height="25" fill="#0077cc" style="display:none;">
+                    <rect x="10" y="42.5" width="80" height="15" rx="8" transform="rotate(45 50 50)"></rect>
+                    <rect x="10" y="42.5" width="80" height="15" rx="8" transform="rotate(-45 50 50)"></rect>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section scroll-target">
+            <div class="hero-background-image"></div>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1 class="animate-letters-advanced">
+                    <span>T</span><span>Ö</span><span>K</span><span>É</span><span>L</span><span>E</span><span>T</span><span>E</span><span>S</span>
+                    <span>H</span><span>Ű</span><span>S</span><span>É</span><span>G</span>,
+                    <br>
+                    <span>M</span><span>E</span><span>G</span><span>B</span><span>Í</span><span>Z</span><span>H</span><span>A</span><span>T</span><span>Ó</span>
+                    <span>S</span><span>Z</span><span>A</span><span>K</span><span>É</span><span>R</span><span>T</span><span>E</span><span>L</span><span>E</span><span>M</span>
+                </h1>
+                <p class="animate-fadein-delayed" data-aos="fade-up" data-aos-delay="1000">Professzionális klímaszerelés és karbantartás otthonába vagy irodájába, csúcstechnológiával és garanciával.</p>
+                <a href="#contact" class="btn btn-primary btn-hero animate-pulse-grow" data-aos="fade-up" data-aos-delay="1200">
+                    Ingyenes Ajánlatkérés
+                </a>
+            </div>
+            <a href="#services" class="scroll-down-indicator" aria-label="Görgessen a szolgáltatásokhoz">
+                <svg width="30" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M12 19L7 14M12 19L17 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 5V19M12 19L7 14M12 19L17 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: scrollIndicatorArrow 1.5s infinite 0.5s; opacity:0.5"/>
+                </svg>
+            </a>
+        </section>
+
+        <section id="services" class="services-section scroll-target">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Mit Kínálunk?</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Teljes körű klímatechnikai megoldások az Ön igényeire szabva.</p>
+                <div class="service-cards-container">
+                    <article class="service-card" data-aos="fade-up-right" data-aos-delay="200">
+                        <div class="service-icon-wrapper">
+                           <img src="images/icon-ac-home.svg" alt="Lakossági klíma ikon" class="service-icon-svg">
+                        </div>
+                        <h3>Lakossági Klímaszerelés</h3>
+                        <p>Modern, energiatakarékos klímák telepítése otthonokba, személyre szabott tanácsadással.</p>
+                        <a href="#contact" class="btn-details">Érdekel <span class="arrow">&rarr;</span></a>
+                    </article>
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="350">
+                         <div class="service-icon-wrapper">
+                           <img src="images/icon-ac-industrial.svg" alt="Ipari klíma ikon" class="service-icon-svg">
+                        </div>
+                        <h3>Irodai és Ipari Klímák</h3>
+                        <p>Nagyobb terek, üzlethelyiségek, irodaházak komplex klimatizálási rendszereinek tervezése és kivitelezése.</p>
+                        <a href="#contact" class="btn-details">Érdekel <span class="arrow">&rarr;</span></a>
+                    </article>
+                    <article class="service-card" data-aos="fade-up-left" data-aos-delay="200">
+                         <div class="service-icon-wrapper">
+                           <img src="images/icon-ac-maintenance.svg" alt="Karbantartás ikon" class="service-icon-svg">
+                        </div>
+                        <h3>Karbantartás és Javítás</h3>
+                        <p>Rendszeres, szakszerű karbantartás a hosszú élettartam és a megbízható működés érdekében. Gyors hibaelhárítás.</p>
+                        <a href="#contact" class="btn-details">Érdekel <span class="arrow">&rarr;</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="counter-section" class="counter-section scroll-target" data-aos="fade-in">
+            <div class="container">
+                <div class="counter-grid">
+                    <div class="counter-item" data-aos="zoom-in" data-aos-delay="100">
+                        <span class="counter-icon">📈</span>
+                        <h3 class="counter" data-target="1250">0</h3>
+                        <p>Telepített Klíma</p>
+                    </div>
+                    <div class="counter-item" data-aos="zoom-in" data-aos-delay="200">
+                        <span class="counter-icon">😊</span>
+                        <h3 class="counter" data-target="98">0</h3>
+                        <p>% Elégedett Ügyfél</p>
+                    </div>
+                    <div class="counter-item" data-aos="zoom-in" data-aos-delay="300">
+                        <span class="counter-icon">⭐</span>
+                        <h3 class="counter" data-target="10">0</h3>
+                        <p>Év Tapasztalat</p>
+                    </div>
+                     <div class="counter-item" data-aos="zoom-in" data-aos-delay="400">
+                        <span class="counter-icon">🛡️</span>
+                        <h3 class="counter" data-target="5">0</h3>
+                        <p>Év Garancia (opc.)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-section scroll-target">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Büszkeségeink</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Tekintse meg néhány kiemelt munkánkat.</p>
+                <div class="portfolio-grid" data-aos="fade-up" data-aos-delay="200">
+                    <figure class="portfolio-item">
+                        <img src="images/ref-1.jpg" alt="Referencia munka 1 - Modern lakás klímával">
+                        <figcaption>Modern lakás klimatizálása - Budapest</figcaption>
+                    </figure>
+                    <figure class="portfolio-item">
+                        <img src="images/ref-2.jpg" alt="Referencia munka 2 - Irodaház hűtőrendszere">
+                        <figcaption>Irodaház központi hűtése - Debrecen</figcaption>
+                    </figure>
+                    <figure class="portfolio-item">
+                        <img src="images/ref-3.jpg" alt="Referencia munka 3 - Családi ház hőszivattyús klíma">
+                        <figcaption>Energiatakarékos megoldás családi házban - Szeged</figcaption>
+                    </figure>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                     <a href="#contact" class="btn btn-secondary" data-aos="fade-up">További referenciák és ajánlatkérés</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section scroll-target">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Rólunk: A Friss Levegő Elkötelezettjei</h2>
+                <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-text">
+                        <p>Cégünk több mint egy évtizede van jelen a klímatechnikai piacon, elkötelezetten szállítva a legmagasabb minőségű hűtési és fűtési megoldásokat ügyfeleink számára. Hiszünk abban, hogy a tiszta, megfelelően temperált levegő alapvető fontosságú a komfortos élethez és a produktív munkavégzéshez.</p>
+                        <p>Szakértő csapatunk folyamatosan képzi magát, hogy naprakész legyen a legújabb technológiákkal és trendekkel. Célunk, hogy minden ügyfelünk számára megtaláljuk a legoptimálisabb, energiatakarékos és megbízható megoldást, legyen szó egy egyszerű lakossági split klímáról vagy egy komplex ipari rendszerről.</p>
+                        <ul>
+                            <li><span class="tick-icon">✓</span> Innovatív technológiák</li>
+                            <li><span class="tick-icon">✓</span> Ügyfélközpontú szemlélet</li>
+                            <li><span class="tick-icon">✓</span> Garancia és megbízhatóság</li>
+                            <li><span class="tick-icon">✓</span> Környezettudatos megoldások</li>
+                        </ul>
+                    </div>
+                    <div class="about-image" data-aos="fade-left" data-aos-delay="300">
+                        <img src="images/team-working.jpg" alt="Klímaszerelő csapat munka közben">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section scroll-target">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Vegye Fel Velünk a Kapcsolatot!</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Kérdése van, vagy egyedi ajánlatot szeretne? Keressen minket bizalommal!</p>
+                <div class="contact-wrapper">
+                    <form id="contact-form" class="contact-form" data-aos="fade-right" data-aos-delay="200">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Teljes Név</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Cím</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Telefonszám (opcionális)</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Üzenet</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Üzenet Küldése</button>
+                    </form>
+                    <div class="contact-info" data-aos="fade-left" data-aos-delay="300">
+                        <h3>Elérhetőségeink:</h3>
+                        <p><img src="images/icon-phone.svg" alt="Telefon" class="contact-icon"> +36 (XX) XXX-XXXX</p>
+                        <p><img src="images/icon-email.svg" alt="Email" class="contact-icon"> info@klimamester.hu</p>
+                        <p><img src="images/icon-location.svg" alt="Cím" class="contact-icon"> 1234 Budapest, Minta utca 5.</p>
+                        <h4>Kövessen Minket:</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+                            <a href="#" aria-label="Instagram"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo" class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> KlímaMester. Minden jog fenntartva. | <a href="#">Adatvédelmi Nyilatkozat</a></p>
+        </div>
+    </footer>
+
+    <a href="#hero" class="back-to-top" aria-label="Vissza a tetejére">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
+
+    <div class="preloader">
+        <div class="spinner"></div>
+        <p>KlímaMester Betöltés...</p>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+script.js  :
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => { // Kis késleltetés, hogy biztosan minden betöltődjön
+                preloader.classList.add('hidden');
+            }, 300);
+        });
+    }
+
+    AOS.init({
+        duration: 700, // Kicsit gyorsabb animációk
+        once: true,    // Animációk csak egyszer fussanak le
+        offset: 60,
+        easing: 'ease-out-cubic',
+    });
+
+    const siteHeader = document.querySelector('.site-header');
+    const navHeightInitial = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height'), 10);
+    const navHeightScrolled = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-scrolled-height'), 10);
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            siteHeader.classList.add('scrolled');
+        } else {
+            siteHeader.classList.remove('scrolled');
+        }
+        // Aktív menüpont frissítése görgetéskor
+        updateActiveNavLinkOnScroll();
+    });
+
+    function updateScrollMargins() {
+        const currentNavHeight = siteHeader.classList.contains('scrolled') ? navHeightScrolled : navHeightInitial;
+        document.querySelectorAll('.scroll-target').forEach(section => {
+            section.style.scrollMarginTop = currentNavHeight + 'px';
+        });
+    }
+    updateScrollMargins();
+    window.addEventListener('resize', updateScrollMargins);
+
+
+    const heroTitleAdvanced = document.querySelector('.hero-section .hero-content h1.animate-letters-advanced');
+    if (heroTitleAdvanced) {
+        const spans = heroTitleAdvanced.querySelectorAll('span');
+        spans.forEach((span, index) => {
+            span.style.animationDelay = `${index * 0.06}s`;
+        });
+    }
+
+    const counters = document.querySelectorAll('.counter');
+    const counterSpeed = 200;
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        let currentCount = 0;
+        counter.innerText = currentCount;
+
+        const updateCount = () => {
+            const increment = target / counterSpeed;
+            currentCount += increment;
+
+            if (currentCount < target) {
+                counter.innerText = Math.ceil(currentCount);
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target;
+                counter.classList.add('finished'); // Jelöljük, hogy befejeződött
+            }
+        };
+        requestAnimationFrame(updateCount);
+    };
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counterElement = entry.target.querySelector('.counter') || entry.target;
+                if (counterElement && !counterElement.classList.contains('animated') && !counterElement.classList.contains('finished')) {
+                    animateCounter(counterElement);
+                    counterElement.classList.add('animated');
+                }
+            }
+        });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('.counter-item').forEach(item => {
+        counterObserver.observe(item);
+    });
+
+    const backToTopButton = document.querySelector('.back-to-top');
+    if (backToTopButton) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 350) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+    }
+
+    const currentYearSpan = document.getElementById('currentYear');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+    const scrollDownLink = document.querySelector('.scroll-down-indicator');
+    if (scrollDownLink) {
+        scrollDownLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = scrollDownLink.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    // Mobil Navigáció Toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const primaryNav = document.getElementById('primary-navigation'); // ID-val hivatkozunk rá
+
+    if (mobileNavToggle && primaryNav) {
+        mobileNavToggle.addEventListener('click', () => {
+            const isExpanded = primaryNav.classList.toggle('active');
+            mobileNavToggle.setAttribute('aria-expanded', isExpanded);
+            mobileNavToggle.classList.toggle('active'); // A gombnak is adjunk egy active class-t az ikonváltáshoz
+            document.body.classList.toggle('nav-open', isExpanded);
+        });
+
+        // Menülinkekre kattintva zárja be a mobil menüt
+        primaryNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (primaryNav.classList.contains('active')) {
+                    primaryNav.classList.remove('active');
+                    mobileNavToggle.setAttribute('aria-expanded', 'false');
+                    mobileNavToggle.classList.remove('active');
+                    document.body.classList.remove('nav-open');
+                }
+            });
+        });
+    }
+
+    // Aktív menüpont jelölése görgetéskor és kattintáskor
+    const navLinks = document.querySelectorAll('.sticky-nav ul li a');
+    const sections = document.querySelectorAll('section.scroll-target');
+
+    function updateActiveNavLinkOnScroll() {
+        let currentSectionId = '';
+        const scrollPosition = window.scrollY;
+        const navActualHeight = siteHeader.classList.contains('scrolled') ? navHeightScrolled : navHeightInitial;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - navActualHeight - 5; // Kis puffer
+            const sectionHeight = section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSectionId = section.id;
+            }
+        });
+
+        // Ha az oldal alján vagyunk és az utolsó szekció nem tölti ki teljesen a viewportot
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight -50 && sections.length > 0) {
+            currentSectionId = sections[sections.length - 1].id;
+        }
+
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === currentSectionId) {
+                link.classList.add('active');
+            }
+        });
+    }
+    // Kezdeti beállítás és kattintás eseménykezelők
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            // A scroll-margin-top miatt a scrollIntoView már jól működik
+            // e.preventDefault(); // Nem kell, ha a scroll-margin-top jó
+            // const targetId = this.getAttribute('href');
+            // const targetSection = document.querySelector(targetId);
+            // if(targetSection) targetSection.scrollIntoView({ behavior: 'smooth'});
+
+            // Az aktív osztályt a görgetés fogja kezelni, de azonnal is beállíthatjuk
+            setTimeout(() => { // Kis késleltetés, hogy a görgetés befejeződjön
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            }, 50); // Ha a görgetés utáni frissítés nem elég gyors, ez segít
+        });
+    });
+    // Első betöltéskor is fusson le
+    updateActiveNavLinkOnScroll();
+
+
+    const contactForm = document.getElementById('contact-form');
+    if(contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // DEMO: Itt jöhetne az AJAX küldés
+            alert('Köszönjük üzenetét! Hamarosan felvesszük Önnel a kapcsolatot. (Ez egy demo üzenet)');
+            contactForm.reset();
+            // Mezők alaphelyzetbe állítása (ha a :valid miatt fent marad a label)
+            contactForm.querySelectorAll('input, textarea').forEach(field => {
+                const label = field.nextElementSibling;
+                if (label && label.tagName === 'LABEL') {
+                    // Itt lehetne logikát hozzáadni, hogy a label visszaugorjon,
+                    // de a CSS :valid selector ezt általában jól kezeli reset után.
+                }
+            });
+        });
+    }
+});
+
+
+
+style.css
+/* style.css */
+:root {
+    --primary-color: #0077cc;
+    --primary-color-rgb: 0, 119, 204;
+    --secondary-color: #00aaff;
+    --secondary-color-rgb: 0, 170, 255;
+    --accent-color: #ff9800;
+    --text-color: #333;
+    --light-text-color: #f4f7f6;
+    --background-color: #ffffff;
+    --light-gray-background: #f9f9f9;
+    --dark-gray-background: #e9e9e9;
+    --nav-height: 70px;
+    --nav-scrolled-height: 60px;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-secondary);
+    margin: 0;
+    padding-top: var(--nav-height);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+body.nav-open {
+    overflow: hidden; /* Menü nyitva, háttér görgetés tiltva */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.scroll-target {
+    scroll-margin-top: var(--nav-height);
+}
+
+/* Header és Navigáció */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+    height: var(--nav-height);
+}
+
+.site-header.scrolled {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    height: var(--nav-scrolled-height);
+}
+
+.sticky-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-family: var(--font-primary);
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.logo a:hover {
+    color: var(--secondary-color);
+}
+.logo span {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.sticky-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.sticky-nav ul li {
+    margin-left: 2.5rem;
+}
+
+.sticky-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.sticky-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sticky-nav ul li a:hover::after,
+.sticky-nav ul li a.active::after {
+    width: 100%;
+}
+.sticky-nav ul li a:hover,
+.sticky-nav ul li a.active {
+    color: var(--primary-color);
+}
+
+.mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001; /* Legyen a lenyíló menü felett is */
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Hero Szekció */
+.hero-section {
+    min-height: calc(100vh - var(--nav-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ==================================================================== */
+    /* IDE ÍRD BE A SAJÁT KÉPED ELÉRÉSI ÚTJÁT!                            */
+    /* Például: background: url('images/sajat-hero-hatterkep.jpg') no-repeat center center/cover; */
+    /* ==================================================================== */
+    background: url('images/sajat-hero-hatterkep.jpg') no-repeat center center/cover;
+    /* Használj egy jó minőségű, de optimalizált képet! */
+    /* Ha nem találná a képet, vagy alapértelmezett szín kellene: */
+    /* background-color: #33475b;  */
+    z-index: 1; /* Kép van legalul */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Kék árnyalat csökkentett átlátszósággal, hogy a kép jobban látszódjon */
+    /* Ha teljesen el akarod tüntetni: background: transparent; */
+    /* Vagy csökkentsd tovább az átlátszóságot (pl. 0.3, 0.15) */
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.4) 0%, rgba(var(--secondary-color-rgb), 0.25) 100%);
+    z-index: 2; /* Overlay a kép felett */
+}
+
+.hero-content {
+    position: relative; /* Hogy az overlay felett legyen */
+    z-index: 3; /* Tartalom az overlay felett */
+    padding: 2rem; /* Kis padding, hogy ne érjen a szélekhez a szöveg */
+}
+
+.hero-content h1.animate-letters-advanced {
+    font-family: var(--font-primary);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Erősebb árnyék a jobb olvashatóságért a képen */
+}
+.animate-letters-advanced span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px) scale(0.8) rotateX(-90deg);
+    transform-origin: bottom;
+    animation: letterEntrance 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+@keyframes letterEntrance {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateX(0deg);
+    }
+}
+.hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4); /* Enyhe árnyék a bekezdésnek is */
+}
+.btn-hero {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.animate-pulse-grow {
+    animation: pulseGrow 2.5s infinite ease-out;
+}
+@keyframes pulseGrow {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--secondary-color-rgb), 0.6); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 18px rgba(var(--secondary-color-rgb), 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--secondary-color-rgb), 0); }
+}
+
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3; /* Ez is legyen a tartalommal egy szinten */
+    cursor: pointer;
+}
+.scroll-down-indicator svg path {
+    animation: scrollIndicatorArrow 1.5s infinite;
+}
+@keyframes scrollIndicatorArrow {
+  0%   { opacity: 1; transform: translateY(0); }
+  50%  { opacity: 0.3; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Általános szekció stílusok */
+.services-section, .portfolio-section, .about-section, .contact-section, .counter-section {
+    padding: 5rem 0;
+}
+.services-section { background-color: var(--light-gray-background); }
+.portfolio-section { background-color: var(--background-color); }
+.about-section { background-color: var(--light-gray-background); }
+.contact-section { background-color: var(--dark-gray-background); }
+
+.section-title {
+    font-family: var(--font-primary);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Service Cards */
+.service-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+.service-card {
+    background-color: var(--background-color);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-top: 4px solid var(--secondary-color);
+}
+.service-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(var(--primary-color-rgb), 0.18);
+}
+.service-icon-wrapper {
+    background-color: rgba(var(--secondary-color-rgb),0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.service-icon-svg {
+    width: 35px;
+    height: 35px;
+    /* SVG fill színét a fájlban vagy itt lehet állítani, ha a kép engedi */
+}
+.service-card h3 {
+    font-family: var(--font-primary);
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+.service-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.btn-details {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+.btn-details .arrow {
+    margin-left: 0.5em;
+    transition: transform 0.3s ease;
+}
+.btn-details:hover {
+    color: var(--secondary-color);
+}
+.btn-details:hover .arrow {
+    transform: translateX(5px);
+}
+.btn {
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent; /* Alap border a méretkonzisztencia miatt */
+}
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(var(--secondary-color-rgb), 0.4);
+}
+
+
+/* Counter Szekció */
+.counter-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--light-text-color);
+    text-align: center;
+}
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+.counter-item {
+    padding: 1rem;
+}
+.counter-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+.counter-item h3.counter {
+    font-family: var(--font-primary);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.counter-item p {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Portfolio Szekció */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.portfolio-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+.portfolio-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.portfolio-item:hover figcaption {
+    transform: translateY(0);
+    opacity: 1;
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* About Szekció */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+.about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+.about-text ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+}
+.tick-icon {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Contact Szekció */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    background-color: var(--background-color);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.contact-form {
+    flex: 2;
+    min-width: 300px;
+}
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    padding-left: 2rem;
+    border-left: 1px solid #ddd;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 0.5rem 0.8rem 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    color: var(--text-color);
+    box-sizing: border-box; /* Fontos, hogy a padding ne növelje a méretet */
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+}
+.form-group label {
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    color: #777;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+    top: -1.2rem;
+    left: 0;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+}
+.btn-submit {
+    width: auto;
+    padding: 0.9rem 2rem;
+    letter-spacing: 0.5px;
+}
+.contact-info h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-top: 0;
+}
+.contact-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.contact-icon {
+    width: 20px; height: 20px; margin-right: 0.8rem;
+}
+.social-icons a img {
+    width: 28px; height: 28px; margin-right: 0.7rem; opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.social-icons a:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Lábléc */
+.site-footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background-color: #2c3e50;
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+.site-footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+.site-footer p {
+    margin: 0.5rem 0;
+}
+
+/* Vissza a tetejére gomb */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: background-color 0.3s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+.back-to-top.visible {
+    opacity: 0.8;
+    transform: translateY(0) scale(1);
+}
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    opacity: 1;
+}
+.back-to-top svg {
+    width: 20px; height: 20px; display: block; /* A pontosabb középre igazításhoz */
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s 0.3s ease, visibility 0.5s 0.3s ease; /* Késleltetett eltűnés */
+}
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--dark-gray-background);
+    border-top-color: var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+.preloader p {
+    color: var(--primary-color);
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Mobilnézet - Navigáció */
+@media (max-width: 992px) {
+    .sticky-nav ul {
+        display: none;
+        position: fixed; /* Teljes képernyős legyen */
+        top: 0; /* Fentől induljon */
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Teljes magasság */
+        background-color: rgba(255, 255, 255, 0.98); /* Enyhén áttetsző háttér */
+        backdrop-filter: blur(5px); /* Háttér elmosása (modern böngészőkben) */
+        flex-direction: column;
+        justify-content: center; /* Középre igazítás */
+        align-items: center; /* Középre igazítás */
+        padding: 1rem 0;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        transform: translateX(100%); /* Kezdetben jobbra kitolva */
+        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* Finomabb animáció */
+        z-index: 1000; /* Toggle gomb felett legyen, de a header alatt */
+    }
+    .sticky-nav ul.active {
+        display: flex;
+        transform: translateX(0%); /* Behúzás balról */
+    }
+    .sticky-nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .sticky-nav ul li a {
+        padding: 1.5rem; /* Nagyobb kattintható felület */
+        display: block;
+        width: 100%;
+        font-size: 1.3rem; /* Nagyobb betűméret mobilmenüben */
+    }
+    .sticky-nav ul li a::after {
+        bottom: 1rem;
+        height: 2px;
+    }
+    .mobile-nav-toggle {
+        display: block;
+    }
+    .mobile-nav-toggle .close-icon { display: none; }
+    .mobile-nav-toggle .hamburger-icon { display: block; }
+
+    .mobile-nav-toggle.active .close-icon { display: block; }
+    .mobile-nav-toggle.active .hamburger-icon { display: none; }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: var(--nav-scrolled-height);
+    }
+    .site-header, .site-header.scrolled {
+        height: var(--nav-scrolled-height);
+    }
+    .scroll-target {
+        scroll-margin-top: var(--nav-scrolled-height);
+    }
+
+    .contact-wrapper {
+        padding: 2rem;
+    }
+    .contact-info {
+        padding-left: 0;
+        border-left: none;
+        margin-top: 2rem;
+        border-top: 1px solid #ddd;
+        padding-top: 2rem;
+    }
+    .hero-content h1.animate-letters-advanced {
+        font-size: clamp(2rem, 8vw, 3rem); /* Kisebb betűméret mobilon */
+    }
+     .hero-content p {
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+    }
+}
+
