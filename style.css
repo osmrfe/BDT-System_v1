@@ -16,14 +16,11 @@
     --font-secondary: 'Roboto', sans-serif;
 }
 
-/* --- JAVÍTÁS KEZDETE --- */
-/* Globális box-sizing szabály, amely megakadályozza a szélesség-túlnyúlást */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-/* --- JAVÍTÁS VÉGE --- */
 
 html {
     scroll-behavior: smooth;
@@ -36,9 +33,17 @@ body {
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--background-color);
-    overflow-x: hidden;
-    
+    /* Az overflow-x innen el lett távolítva */
 }
+
+/* --- JAVÍTÁS KEZDETE --- */
+/* A page-wrapper megakadályozza az animációk túlnyúlását */
+.page-wrapper {
+    overflow-x: hidden;
+    position: relative; /* Biztosítja a megfelelő működést */
+}
+/* --- JAVÍTÁS VÉGE --- */
+
 
 body.nav-open {
     overflow: hidden; /* Menü nyitva, háttér görgetés tiltva */
