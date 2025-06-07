@@ -1,0 +1,1036 @@
+/* style.css */
+:root {
+    --primary-color: #0077cc; /* Deep Ocean Blue - Good for "fóka" */
+    --primary-color-rgb: 0, 119, 204;
+    --secondary-color: #00aaff; /* Bright Sky Blue - Good for "fóka" */
+    --secondary-color-rgb: 0, 170, 255;
+    --accent-color: #ff9800; /* Sunny Orange - Contrast, use sparingly */
+    --text-color: #333;
+    --light-text-color: #f4f7f6; /* Icy White */
+    --background-color: #ffffff;
+    --light-gray-background: #f0f8ff; /* AliceBlue - very light icy blue */
+    --dark-gray-background: #e0e8f0; /* Light Steel Blue - cool grey */
+    --nav-height: 70px;
+    --nav-scrolled-height: 60px;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-secondary);
+    margin: 0;
+    padding-top: var(--nav-height);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    
+}
+
+body.nav-open {
+    overflow: hidden; /* Menü nyitva, háttér görgetés tiltva */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.scroll-target {
+    scroll-margin-top: var(--nav-height);
+}
+
+/* Header és Navigáció */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+    height: var(--nav-height);
+}
+
+.site-header.scrolled {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    height: var(--nav-scrolled-height);
+}
+
+.sticky-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 5%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logo a {
+    display: inline-block; /* For proper sizing of image link */
+    width: auto;
+    height: auto;
+}
+
+#header-logo {
+    height: 45px; /* Adjust as needed */
+    width: auto;
+    transition: height 0.3s ease;
+}
+.site-header.scrolled #header-logo {
+    height: 50px; /* Slightly smaller when scrolled */
+}
+
+
+.sticky-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.sticky-nav ul li {
+    margin-left: 2rem; /* Slightly reduced for more items */
+}
+
+.sticky-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.90rem; /* Slightly reduced for more items */
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.sticky-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sticky-nav ul li a:hover::after,
+.sticky-nav ul li a.active::after {
+    width: 100%;
+}
+.sticky-nav ul li a:hover,
+.sticky-nav ul li a.active {
+    color: var(--primary-color);
+}
+
+.mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001; /* Legyen a lenyíló menü felett is */
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Hero Szekció */
+.hero-section {
+    min-height: calc(100vh - var(--nav-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    width: 100%;   
+    height: 120%;
+}
+
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* The actual image is set inline in HTML for direct control,
+       but a fallback can be defined here or a default background-color.
+       e.g., background: url('images/foka-hero-hatter.jpg') no-repeat center center/cover; */
+    background-color: #33475b; /* Fallback color if image fails */
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.55) 0%, rgba(var(--secondary-color-rgb), 0.35) 100%); /* Adjusted opacity */
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 2rem;
+}
+
+.hero-content h1.animate-letters-advanced {
+    font-family: var(--font-primary);
+    font-size: clamp(2rem, 5vw, 3.8rem); /* Adjusted for potentially longer text */
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+.animate-letters-advanced span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px) scale(0.8) rotateX(-90deg);
+    transform-origin: bottom;
+    animation: letterEntrance 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+@keyframes letterEntrance {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateX(0deg);
+    }
+}
+.hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    max-width: 650px; /* Slightly wider for new tagline */
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+.btn-hero {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.animate-pulse-grow {
+    animation: pulseGrow 2.5s infinite ease-out;
+}
+@keyframes pulseGrow {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--secondary-color-rgb), 0.6); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 18px rgba(var(--secondary-color-rgb), 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--secondary-color-rgb), 0); }
+}
+
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    cursor: pointer;
+}
+.scroll-down-indicator svg path {
+    animation: scrollIndicatorArrow 1.5s infinite;
+}
+@keyframes scrollIndicatorArrow {
+  0%   { opacity: 1; transform: translateY(0); }
+  50%  { opacity: 0.3; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Általános szekció stílusok */
+.services-section, .portfolio-section, .about-section, .contact-section, .counter-section, .why-us-section, .testimonials-section, .faq-section {
+    padding: 5rem 0;
+}
+.services-section { background-color: var(--light-gray-background); }
+.why-us-section { background-color: var(--background-color); }
+.portfolio-section { background-color: var(--light-gray-background); }
+.testimonials-section { background-color: var(--dark-gray-background); }
+.about-section { background-color: var(--background-color); }
+.faq-section { background-color: var(--light-gray-background); }
+.contact-section { background-color: var(--dark-gray-background); }
+
+
+.section-title {
+    font-family: var(--font-primary);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Service Cards */
+.service-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+.service-card {
+    background-color: var(--background-color);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-top: 4px solid var(--secondary-color);
+}
+.service-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(var(--primary-color-rgb), 0.18);
+}
+.service-icon-wrapper {
+    background-color: rgba(var(--secondary-color-rgb),0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.service-icon-svg {
+    width: 35px;
+    height: 35px;
+}
+.service-card h3 {
+    font-family: var(--font-primary);
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+.service-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.btn-details {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+.btn-details .arrow {
+    margin-left: 0.5em;
+    transition: transform 0.3s ease;
+}
+.btn-details:hover {
+    color: var(--secondary-color);
+}
+.btn-details:hover .arrow {
+    transform: translateX(5px);
+}
+.btn {
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent;
+}
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(var(--secondary-color-rgb), 0.4);
+}
+
+
+/* Counter Szekció */
+.counter-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--light-text-color);
+    text-align: center;
+}
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+.counter-item {
+    padding: 1rem;
+}
+.counter-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+.counter-item h3.counter {
+    font-family: var(--font-primary);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.counter-item p {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Why Us Section */
+.why-us-section {
+    background-color: var(--background-color);
+}
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.why-us-item {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.why-us-icon-wrapper {
+    background-color: rgba(var(--primary-color-rgb),0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem auto;
+}
+.why-us-icon-wrapper img {
+    width: 35px;
+    height: 35px;
+}
+.why-us-item h3 {
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.why-us-item p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* Portfolio Szekció */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.portfolio-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+.portfolio-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    color: white;
+    padding: 2rem 1.5rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.portfolio-item:hover figcaption {
+    transform: translateY(0);
+    opacity: 1;
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.3);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--dark-gray-background);
+}
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.testimonial-card {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    border-left: 5px solid var(--secondary-color);
+}
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.testimonial-card h4 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-align: right;
+}
+
+
+/* About Szekció */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+.about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+.about-text ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+}
+.tick-icon {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+}
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* FAQ Section - Refined Styling */
+.faq-section {
+    background-color: var(--light-gray-background);
+}
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-item {
+    background-color: var(--background-color);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    overflow: hidden; /* Important for max-height animation */
+}
+.faq-question {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 1.5rem 2rem;
+    text-align: left;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.faq-question:hover {
+    background-color: rgba(var(--secondary-color-rgb), 0.05);
+}
+.faq-question::after { /* Arrow icon */
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+}
+.faq-answer {
+    padding: 0 2rem; /* Horizontal padding */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding-top 0.4s ease-out, padding-bottom 0.4s ease-out;
+}
+.faq-answer p {
+    /* Vertical padding for the content inside the answer is now handled by .faq-item.active .faq-answer */
+    margin: 0; /* Reset paragraph margin if needed */
+    padding: 0; /* Paragraph itself won't have vertical padding if container does */
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+}
+.faq-item.active .faq-answer {
+    padding-top: 1rem;    /* Vertical padding when active */
+    padding-bottom: 1.5rem;/* Vertical padding when active */
+    /* max-height is controlled by JS to smoothly reveal content */
+}
+
+
+/* Contact Szekció */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    background-color: var(--background-color);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.contact-form {
+    flex: 2;
+    min-width: 300px;
+}
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    padding-left: 2rem;
+    border-left: 1px solid #ddd;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 0.5rem 0.8rem 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+}
+.form-group label {
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    color: #777;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+    top: -1.2rem;
+    left: 0;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+}
+.btn-submit {
+    width: auto;
+    padding: 0.9rem 2rem;
+    letter-spacing: 0.5px;
+}
+.contact-info h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-top: 0;
+}
+.contact-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.contact-icon {
+    width: 20px; height: 20px; margin-right: 0.8rem;
+    filter: invert(40%) sepia(88%) saturate(1559%) hue-rotate(185deg) brightness(96%) contrast(101%); /* Makes icons theme color */
+}
+.social-icons a img {
+    width: 28px; height: 28px; margin-right: 0.7rem; opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.social-icons a:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: invert(65%) sepia(90%) saturate(2269%) hue-rotate(165deg) brightness(102%) contrast(101%); /* Hover effect for social icons */
+}
+
+/* Lábléc */
+.site-footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background-color: #223a50; /* Darker, cool blue for footer */
+    color: #bdc3c7; /* Light grey text */
+    font-size: 0.9rem;
+}
+.site-footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+.site-footer p {
+    margin: 0.5rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.footer-logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+    opacity: 0.8;
+}
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-text {
+        text-align: right;
+        align-items: flex-end;
+    }
+    .footer-logo {
+        margin-right: 2rem;
+    }
+}
+
+
+/* Vissza a tetejére gomb */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: background-color 0.3s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+.back-to-top.visible {
+    opacity: 0.8;
+    transform: translateY(0) scale(1);
+}
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    opacity: 1;
+}
+.back-to-top svg {
+    width: 20px; height: 20px;
+    display: block;
+}
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s 0.3s ease, visibility 0.5s 0.3s ease;
+}
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--dark-gray-background);
+    border-top-color: var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+.preloader p {
+    color: var(--primary-color);
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Mobilnézet - Navigáció */
+@media (max-width: 992px) {
+    .sticky-nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(5px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        z-index: 1000;
+    }
+    .sticky-nav ul.active {
+        display: flex;
+        transform: translateX(0%);
+    }
+    .sticky-nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .sticky-nav ul li a {
+        padding: 1.3rem; /* Adjusted padding for more items */
+        display: block;
+        width: 100%;
+        font-size: 1.2rem; /* Adjusted font size */
+    }
+    .sticky-nav ul li a::after {
+        bottom: 0.8rem; /* Adjusted for new padding */
+        height: 2px;
+    }
+    .mobile-nav-toggle {
+        display: block;
+    }
+    .mobile-nav-toggle .close-icon { display: none; }
+    .mobile-nav-toggle .hamburger-icon { display: block; }
+
+    .mobile-nav-toggle.active .close-icon { display: block; }
+    .mobile-nav-toggle.active .hamburger-icon { display: none; }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: var(--nav-scrolled-height);
+    }
+    .site-header, .site-header.scrolled {
+        height: var(--nav-scrolled-height);
+    }
+    #header-logo, .site-header.scrolled #header-logo {
+        height: 35px; /* Ensure logo fits smaller header */
+    }
+    .scroll-target {
+        scroll-margin-top: var(--nav-scrolled-height);
+    }
+
+    .sticky-nav ul li {
+        margin-left: 0; /* No margin needed for mobile nav items */
+    }
+    .sticky-nav ul li a {
+      font-size: 1.1rem; /* Slightly smaller for very small screens if many items */
+      padding: 1.1rem;
+    }
+
+    .contact-wrapper {
+        padding: 2rem;
+        flex-direction: column; /* Stack form and info on mobile */
+    }
+    .contact-info {
+        padding-left: 0;
+        border-left: none;
+        margin-top: 2rem;
+        border-top: 1px solid #ddd;
+        padding-top: 2rem;
+    }
+    .hero-content h1.animate-letters-advanced {
+        font-size: clamp(1.8rem, 7vw, 2.8rem); /* Smaller for mobile */
+    }
+     .hero-content p {
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+    }
+    .section-title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+    .services-section, .portfolio-section, .about-section, .contact-section, .counter-section, .why-us-section, .testimonials-section, .faq-section {
+        padding: 3.5rem 0;
+    }
+    .faq-question {
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+    }
+    .faq-answer p { /* Ensure paragraph inside FAQ answer is also responsive if needed */
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+/* árajánlat kérés */
+
+    .form-container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      /* width: 100%;
+      max-width: 500px; */
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      margin-top: 16px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #007BFF;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0,123,255,0.2);
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
