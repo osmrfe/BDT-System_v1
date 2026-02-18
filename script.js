@@ -233,3 +233,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+function initSnowfall() {
+    const canvas = document.getElementById('snow-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height, particles = [];
+
+    function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor() {
+            this.reset();
+        }
+        reset() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height - height;
+            this.size = Math.random() * 3 + 1;
+            this.speed = Math.random() * 1 + 0.5;
+            this.velX = Math.random() * 0.5 - 0.25;
+        }
+        update() {
+            this.y += this.speed;
+            this.x += this.velX;
+            if (this.y > height) this.reset();
+        }
+        draw() {
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    for (let i = 0; i < 100; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+        requestAnimationFrame(animate);
+    }
+    animate();
+}
+
+// Indítás az oldal betöltésekor
+document.addEventListener('DOMContentLoaded', () => {
+    initSnowfall();
+});
+
+
