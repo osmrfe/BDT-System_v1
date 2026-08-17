@@ -148,6 +148,88 @@ body.nav-open {
     color: var(--primary-color);
 }
 
+
+
+.brands {
+    background: white;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+
+.brands h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.slide-track {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    width: max-content;
+
+    animation: mozgas 25s linear infinite;
+}
+
+
+.brand {
+    width: 160px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.brand img {
+    max-width: 150px;
+    max-height: 70px;
+
+    object-fit: contain;
+
+    filter: grayscale(100%);
+    opacity: 0.8;
+
+    transition: 0.3s;
+}
+
+
+.brand img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+
+/* Balról jobbra mozgás */
+@keyframes mozgas {
+
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+
+}
+
+
+
+
+
+
 .mobile-nav-toggle {
     display: none;
     background: transparent;
@@ -481,6 +563,77 @@ body.nav-open {
 .portfolio-item:hover img {
     transform: scale(1.1);
 }
+
+
+.facebook-reference {
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(24, 119, 242, 0.16) 0%,
+            rgba(120, 90, 220, 0.10) 35%,
+            rgba(255, 255, 255, 0) 70%
+        ),
+        #ffffff;
+}
+
+.facebook-box {
+    max-width: 800px;
+    margin: auto;
+    background: linear-gradient(135deg, #eef5ff, #1877F2);
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(24,119,242,0.12);
+}
+
+
+.facebook-box h2 {
+    font-size:32px;
+    color:#222;
+    margin-bottom:20px;
+}
+
+
+.facebook-box p {
+    font-size:18px;
+    line-height:1.6;
+    color:#555;
+    margin-bottom:35px;
+}
+
+
+.facebook-btn {
+
+    display:inline-block;
+
+    background:#1877f2;
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+
+.facebook-btn:hover {
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(24,119,242,.4);
+
+}
+
+
 .portfolio-item figcaption {
     position: absolute;
     bottom: 0;
@@ -510,6 +663,140 @@ body.nav-open {
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.3);
 }
+
+
+.references{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.references h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.references>p{
+    text-align:center;
+    margin-bottom:50px;
+    color:#777;
+}
+
+/* Fő rács beállítása (Asztali nézet) */
+#dynamic-reference-grid {
+    display: grid;
+    /* Ez a sor mondja meg, hogy 4 egyenlő oszlop legyen (4 darab 1fr) */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 30px; /* Távolság a kártyák között */
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Kártyák alapbeállítása (ha eddig nem volt sortörés engedélyezve) */
+.reference-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Ide jöhet a többi eddigi kártya-dizájnod (háttér, árnyék, stb.) */
+}
+
+/* --- RESZPONZÍV BEÁLLÍTÁSOK (Mobil és Tablet) --- */
+
+/* Kisebb monitorokon és fektetett tableteken (3 oszlop) */
+    #dynamic-reference-grid {
+    display: grid !important; /* Garantálja, hogy Grid-et használjunk Flex helyett */
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-auto-rows: auto; /* A sorok magassága automatikusan a tartalomhoz igazodik */
+    gap: 30px;
+    width: 100%;
+    margin-top: 40px;
+    height: auto !important; /* Felülírja, ha véletlenül fix magasság volt beállítva */
+    overflow: visible !important; /* Megakadályozza, hogy levágja a kilógó (alsó) sorokat */
+}
+
+/* Álló tableteken (2 oszlop) */
+@media (max-width: 900px) {
+    #dynamic-reference-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Mobiltelefonokon (1 oszlop) */
+@media (max-width: 600px) {
+    #dynamic-reference-grid {
+        grid-template-columns: 1fr; /* Egymás alá kerül az összes */
+    }
+}
+
+.reference-card {
+    height: 100%; /* Hogy egy sorban minden kártya egyforma magas legyen */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.reference-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.reference-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.reference-content{
+
+    padding:25px;
+
+}
+
+.reference-content h3{
+
+    margin-bottom:15px;
+
+}
+
+.reference-content p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+.facebook-btn{
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    background:#1877F2;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.facebook-btn:hover{
+
+    background:#125fbd;
+
+}
+
+
 
 /* Testimonials Section */
 .testimonials-section {
@@ -1058,4 +1345,189 @@ body.nav-open {
     margin: 0;
     color: #333;
     line-height: 1.6;
+}
+
+/* --- REFERENCIA MODÁLIS ABLAK (FÓKUSZ) --- */
+
+/* Az overlay (sötétített háttér) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Sötét, átlátszó háttér */
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Ha aktív, akkor megjelenik */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* A fehér kártya belül */
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh; /* Ne lógjon ki a képernyőről */
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    overflow-y: auto; /* Ha sok a szöveg/kép, lehessen görgetni */
+    transform: translateY(30px) scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+/* Bezáró gomb (X) */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: var(--primary-color);
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-right: 30px; /* Hogy ne folyjon rá az X-re */
+}
+
+/* Galéria a modálison belül (Grid elrendezés) */
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.modal-body {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.modal-body p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+/* Egér mutató (kéz) a referencia kártyákhoz */
+.reference-card {
+    cursor: pointer;
+}
+.reference-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* A fehér kártya belül */
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh; 
+    border-radius: 15px;
+    padding: 30px;
+    position: relative !important; /* Ez MUSSZÁJ, hogy a gomb a sarkához igazodjon */
+    overflow-y: auto; 
+    transform: translateY(30px) scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+/* Bezáró gomb (X) - kőkeményen a jobb felső sarokba rögzítve */
+.modal-close {
+    position: absolute !important;
+    top: 15px !important;
+    right: 20px !important;
+    font-size: 35px !important;
+    background: transparent !important; /* Háttérszín eltüntetése */
+    border: none !important;
+    outline: none !important; /* Csúnya kék fókusz keret eltávolítása */
+    box-shadow: none !important; /* Ha a keret árnyék lenne, azt is levesszük */
+    -webkit-tap-highlight-color: transparent; /* Mobil kék villanás ellen */
+    cursor: pointer;
+    color: #555;
+    padding: 0 !important;
+    line-height: 1 !important;
+    z-index: 100 !important; /* Biztosan minden szöveg felett legyen */
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* A kék keret eltüntetése kattintás (fókusz) közben is */
+.modal-close:focus,
+.modal-close:active {
+    outline: none !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.modal-close:hover {
+    color: #0077cc; /* Itt megadhatod a saját kékedet, vagy var(--primary-color)-t */
+}
+
+/* =========================================================
+   REFERENCIA RÁCS ÉS KONTÉNER KIKÉNYSZERÍTETT JAVÍTÁSA
+   ========================================================= */
+
+/* 1. Kiszabadítjuk a rácsot tartó szülő dobozokat a fix magasságból */
+#dynamic-reference-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 30px !important;
+    height: auto !important;
+    min-height: min-content !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-bottom: 50px !important; /* Hogy alul is legyen egy kis hely */
+}
+
+/* 2. Biztosítjuk, hogy maga a kártya se csússzon szét vagy tűnjön el */
+.reference-card {
+    position: relative !important;
+    height: 100% !important;
+    min-height: 250px !important; /* Ne engedjük, hogy összenyomódjon */
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important; 
+}
+
+/* 3. Ha esetleg van egy konténer a grid körül, azt is kinyitjuk */
+#dynamic-reference-grid,
+#dynamic-reference-grid * {
+    visibility: visible !important;
+    opacity: 1 !important;
 }
