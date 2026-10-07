@@ -1,449 +1,4275 @@
 <!DOCTYPE html>
+
 <html lang="hu">
+
 <head>
-
-
-<!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-d223f29e-33b7-4dbd-8b49-7b745d57cd44" data-elfsight-app-lazy></div>
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18128078946">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18128078946');
-</script>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BDT PowerTech🐧 </title>
 
-    <!-- WEB icon -->
-    <link rel="icon" type="image/png" href="image/logo.png">  
+```
+<title>BDT PowerTech | Villanyszerelés és hűtéstechnika</title>
+
+<meta name="description"
+    content="BDT PowerTech – ipari és lakossági villanyszerelés, elektromos hibakeresés és karbantartás, hűtéstechnikai és klímatechnikai munkák, valamint további létesítményüzemeltetési szolgáltatások.">
+
+<meta name="keywords"
+    content="BDT PowerTech, villanyszerelés, ipari villanyszerelés, lakossági villanyszerelés, hűtéstechnika, klímatechnika, klímaszerelés, klímakarbantartás, elektromos hibakeresés">
+
+<link rel="icon" type="image/png" href="image/logo.png">
+
 <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    </head>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Google Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18128078946"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-18128078946');
+</script>
+
+
+<style>
+
+    /* =========================================================
+       BDT POWERTECH - ÚJ FŐOLDAL
+       FÓKUSZ: VILLANYSZERELÉS + HŰTÉSTECHNIKA
+       ========================================================= */
+
+    :root {
+        --bdt-blue: #0879c9;
+        --bdt-blue-dark: #04548e;
+        --bdt-blue-light: #eaf6ff;
+
+        --bdt-dark: #091722;
+        --bdt-dark-2: #102534;
+
+        --bdt-text: #293947;
+        --bdt-muted: #687987;
+
+        --bdt-light: #f4f8fb;
+        --bdt-white: #ffffff;
+
+        --bdt-border: #dbe6ed;
+
+        --bdt-green: #1ca66a;
+
+        --bdt-shadow: 0 18px 50px rgba(5, 42, 69, 0.10);
+
+        --bdt-radius: 20px;
+    }
+
+
+    /* =========================================================
+       ALAPOK
+       ========================================================= */
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "Roboto", sans-serif;
+        background: #fff;
+        color: var(--bdt-text);
+        overflow-x: hidden;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+        font: inherit;
+    }
+
+
+    .bdt-container {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+    }
+
+    .bdt-section {
+        padding: 100px 0;
+    }
+
+
+    .bdt-section-title {
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(30px, 4vw, 46px);
+        line-height: 1.12;
+        font-weight: 800;
+        color: var(--bdt-dark);
+        margin-bottom: 17px;
+    }
+
+
+    .bdt-section-subtitle {
+        max-width: 790px;
+        margin: 0 auto 55px;
+        text-align: center;
+        color: var(--bdt-muted);
+        font-size: 18px;
+        line-height: 1.75;
+    }
+
+
+    /* =========================================================
+       NAVBAR
+       ========================================================= */
+
+    .bdt-header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+
+        background: rgba(6, 18, 29, 0.95);
+
+        backdrop-filter: blur(14px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+
+    .bdt-nav {
+        min-height: 82px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 25px;
+    }
+
+
+    .bdt-logo img {
+        width: 155px;
+        max-height: 62px;
+
+        object-fit: contain;
+    }
+
+
+    .bdt-menu {
+        display: flex;
+        align-items: center;
+
+        gap: 27px;
+
+        list-style: none;
+    }
+
+
+    .bdt-menu a {
+        position: relative;
+
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+
+        color: rgba(255,255,255,.84);
+
+        transition: .25s ease;
+    }
+
+
+    .bdt-menu a::after {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: -8px;
+
+        width: 0;
+        height: 2px;
+
+        background: #56bfff;
+
+        transition: .25s ease;
+    }
+
+
+    .bdt-menu a:hover,
+    .bdt-menu a.active {
+        color: #fff;
+    }
+
+
+    .bdt-menu a:hover::after,
+    .bdt-menu a.active::after {
+        width: 100%;
+    }
+
+
+    .bdt-contact-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 43px;
+
+        padding: 0 18px;
+
+        border-radius: 999px;
+
+        background: var(--bdt-blue);
+
+        color: white !important;
+    }
+
+
+    .bdt-contact-button::after {
+        display: none;
+    }
+
+
+    .bdt-menu-button {
+        display: none;
+
+        width: 46px;
+        height: 46px;
+
+        border: 1px solid rgba(255,255,255,.18);
+
+        border-radius: 12px;
+
+        background: rgba(255,255,255,.05);
+
+        cursor: pointer;
+    }
+
+
+    .bdt-menu-button span {
+        display: block;
+
+        width: 22px;
+        height: 2px;
+
+        margin: 5px auto;
+
+        background: #fff;
+
+        border-radius: 10px;
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .bdt-hero {
+        position: relative;
+
+        min-height: 810px;
+
+        padding-top: 82px;
+
+        display: flex;
+        align-items: center;
+
+        overflow: hidden;
+
+        background:
+            linear-gradient(110deg,
+                rgba(4,16,27,.97),
+                rgba(7,43,68,.84)
+            ),
+            url("image/hatter.jpg") center/cover no-repeat;
+    }
+
+
+    .bdt-hero::before {
+        content: "";
+
+        position: absolute;
+
+        width: 650px;
+        height: 650px;
+
+        right: -260px;
+        top: -250px;
+
+        border-radius: 50%;
+
+        background: rgba(0,139,255,.11);
+
+        filter: blur(20px);
+    }
+
+
+    .bdt-hero-inner {
+        position: relative;
+        z-index: 2;
+
+        display: grid;
+
+        grid-template-columns: 1.13fr .87fr;
+
+        align-items: center;
+
+        gap: 70px;
+    }
+
+
+    .bdt-hero-kicker {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 10px;
+
+        padding: 9px 15px;
+
+        margin-bottom: 25px;
+
+        border-radius: 999px;
+
+        background: rgba(255,255,255,.09);
+
+        border: 1px solid rgba(255,255,255,.14);
+
+        color: #a9deff;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 12px;
+        font-weight: 800;
+
+        letter-spacing: 1.5px;
+
+        text-transform: uppercase;
+    }
+
+
+    .bdt-hero-kicker::before {
+        content: "";
+
+        width: 8px;
+        height: 8px;
+
+        border-radius: 50%;
+
+        background: #4ebcff;
+
+        box-shadow: 0 0 0 5px rgba(78,188,255,.13);
+    }
+
+
+    .bdt-hero h1 {
+        max-width: 780px;
+
+        margin-bottom: 25px;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: clamp(43px, 5.5vw, 74px);
+
+        line-height: 1.01;
+
+        font-weight: 900;
+
+        letter-spacing: -2px;
+
+        color: white;
+    }
+
+
+    .bdt-hero h1 .blue {
+        color: #65c4ff;
+    }
+
+
+    .bdt-hero h1 .white {
+        color: white;
+    }
+
+
+    .bdt-hero-text {
+        max-width: 690px;
+
+        margin-bottom: 35px;
+
+        color: rgba(255,255,255,.76);
+
+        font-size: 20px;
+
+        line-height: 1.7;
+    }
+
+
+    .bdt-hero-buttons {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 13px;
+    }
+
+
+    .bdt-button {
+        min-height: 54px;
+
+        padding: 0 25px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 14px;
+        font-weight: 700;
+
+        transition: .25s ease;
+
+        cursor: pointer;
+    }
+
+
+    .bdt-button-primary {
+        background: var(--bdt-blue);
+
+        color: white;
+
+        box-shadow: 0 12px 30px rgba(8,121,201,.28);
+    }
+
+
+    .bdt-button-primary:hover {
+        transform: translateY(-3px);
+
+        background: #0a87dc;
+    }
+
+
+    .bdt-button-outline {
+        background: rgba(255,255,255,.05);
+
+        border: 1px solid rgba(255,255,255,.22);
+
+        color: white;
+    }
+
+
+    .bdt-button-outline:hover {
+        transform: translateY(-3px);
+
+        background: rgba(255,255,255,.10);
+    }
+
+
+    /* =========================================================
+       HERO PANEL
+       ========================================================= */
+
+    .bdt-hero-panel {
+        padding: 28px;
+
+        border-radius: 28px;
+
+        background: rgba(255,255,255,.085);
+
+        border: 1px solid rgba(255,255,255,.14);
+
+        backdrop-filter: blur(15px);
+
+        box-shadow: 0 25px 70px rgba(0,0,0,.19);
+    }
+
+
+    .bdt-hero-panel-title {
+        margin-bottom: 19px;
+
+        color: white;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 17px;
+
+        font-weight: 800;
+
+        text-align: center;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1px;
+    }
+
+
+    .bdt-main-service {
+        padding: 18px;
+
+        margin-bottom: 12px;
+
+        border-radius: 17px;
+
+        background: rgba(255,255,255,.09);
+
+        border: 1px solid rgba(255,255,255,.09);
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    .bdt-main-service:last-child {
+        margin-bottom: 0;
+    }
+
+
+    .bdt-main-service-icon {
+        flex: 0 0 50px;
+
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 14px;
+
+        background: rgba(5,143,229,.20);
+
+        color: white;
+
+        font-size: 24px;
+    }
+
+
+    .bdt-main-service strong {
+        display: block;
+
+        margin-bottom: 4px;
+
+        color: white;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 15px;
+    }
+
+
+    .bdt-main-service span {
+        color: rgba(255,255,255,.58);
+
+        font-size: 13px;
+
+        line-height: 1.45;
+    }
+
+
+    .bdt-secondary-service {
+        padding: 12px 3px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+        color: rgba(255,255,255,.70);
+
+        font-size: 13px;
+    }
+
+
+    .bdt-secondary-service i {
+        width: 8px;
+        height: 8px;
+
+        border-radius: 50%;
+
+        background: #51bfff;
+    }
+
+
+    /* =========================================================
+       FÓKUSZ SÁV
+       ========================================================= */
+
+    .bdt-focus-strip {
+        position: relative;
+
+        z-index: 10;
+
+        margin-top: -42px;
+    }
+
+
+    .bdt-focus-box {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        overflow: hidden;
+
+        background: white;
+
+        border: 1px solid var(--bdt-border);
+
+        border-radius: 21px;
+
+        box-shadow: var(--bdt-shadow);
+    }
+
+
+    .bdt-focus-item {
+        padding: 30px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 18px;
+    }
+
+
+    .bdt-focus-item + .bdt-focus-item {
+        border-left: 1px solid var(--bdt-border);
+    }
+
+
+    .bdt-focus-icon {
+        flex: 0 0 55px;
+
+        width: 55px;
+        height: 55px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 15px;
+
+        background: var(--bdt-blue-light);
+
+        font-size: 26px;
+    }
+
+
+    .bdt-focus-item strong {
+        display: block;
+
+        margin-bottom: 4px;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 16px;
+    }
+
+
+    .bdt-focus-item span {
+        color: var(--bdt-muted);
+
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       FŐ SZOLGÁLTATÁSOK
+       ========================================================= */
+
+    .bdt-main-services {
+        background: var(--bdt-light);
+    }
+
+
+    .bdt-main-services-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .bdt-feature-card {
+        position: relative;
+
+        padding: 40px;
+
+        min-height: 390px;
+
+        background: white;
+
+        border-radius: 22px;
+
+        border: 1px solid var(--bdt-border);
+
+        box-shadow: 0 10px 30px rgba(5,42,69,.045);
+
+        overflow: hidden;
+
+        transition: .3s ease;
+    }
+
+
+    .bdt-feature-card::after {
+        content: "";
+
+        position: absolute;
+
+        right: -70px;
+        bottom: -90px;
+
+        width: 260px;
+        height: 260px;
+
+        border-radius: 50%;
+
+        background: rgba(8,121,201,.055);
+    }
+
+
+    .bdt-feature-card:hover {
+        transform: translateY(-8px);
+
+        box-shadow: var(--bdt-shadow);
+    }
+
+
+    .bdt-feature-card-main {
+        position: relative;
+
+        z-index: 2;
+    }
+
+
+    .bdt-feature-card-icon {
+        width: 72px;
+        height: 72px;
+
+        margin-bottom: 24px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 19px;
+
+        background: var(--bdt-blue-light);
+
+        font-size: 32px;
+    }
+
+
+    .bdt-feature-card h3 {
+        margin-bottom: 15px;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 25px;
+
+        line-height: 1.18;
+    }
+
+
+    .bdt-feature-card p {
+        margin-bottom: 20px;
+
+        color: var(--bdt-muted);
+
+        font-size: 16px;
+
+        line-height: 1.72;
+    }
+
+
+    .bdt-feature-list {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 9px 18px;
+
+        list-style: none;
+    }
+
+
+    .bdt-feature-list li {
+        position: relative;
+
+        padding-left: 21px;
+
+        color: #465968;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    .bdt-feature-list li::before {
+        content: "✓";
+
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        color: var(--bdt-blue);
+
+        font-weight: 900;
+    }
+
+
+    .bdt-feature-link {
+        position: relative;
+
+        z-index: 3;
+
+        display: inline-flex;
+
+        margin-top: 24px;
+
+        color: var(--bdt-blue);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 13px;
+
+        font-weight: 800;
+
+        transition: .2s;
+    }
+
+
+    .bdt-feature-link:hover {
+        transform: translateX(4px);
+    }
+
+
+    /* =========================================================
+       KIEGÉSZÍTŐ SZOLGÁLTATÁSOK
+       ========================================================= */
+
+    .bdt-secondary-heading {
+        margin: 55px auto 27px;
+
+        text-align: center;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 23px;
+
+        font-weight: 800;
+    }
+
+
+    .bdt-secondary-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2,1fr);
+
+        gap: 20px;
+
+        max-width: 900px;
+
+        margin: 0 auto;
+    }
+
+
+    .bdt-secondary-card {
+        padding: 26px 28px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 18px;
+
+        background: white;
+
+        border: 1px solid var(--bdt-border);
+
+        border-radius: 17px;
+
+        transition: .25s ease;
+    }
+
+
+    .bdt-secondary-card:hover {
+        transform: translateY(-4px);
+
+        box-shadow: var(--bdt-shadow);
+    }
+
+
+    .bdt-secondary-icon {
+        flex: 0 0 50px;
+
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 14px;
+
+        background: #f1f5f8;
+
+        font-size: 22px;
+    }
+
+
+    .bdt-secondary-card h3 {
+        margin-bottom: 5px;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 17px;
+    }
+
+
+    .bdt-secondary-card p {
+        color: var(--bdt-muted);
+
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       KLÍMAMÁRKÁK
+       ========================================================= */
+
+    .bdt-brands {
+        padding: 65px 0;
+
+        background: white;
+
+        border-top: 1px solid var(--bdt-border);
+
+        border-bottom: 1px solid var(--bdt-border);
+
+        overflow: hidden;
+    }
+
+
+    .bdt-brands-title {
+        margin-bottom: 30px;
+
+        text-align: center;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 22px;
+
+        font-weight: 800;
+    }
+
+
+    .bdt-brand-slider {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+
+    .bdt-brand-track {
+        width: max-content;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 45px;
+
+        animation: bdtBrandScroll 30s linear infinite;
+    }
+
+
+    .bdt-brand {
+        min-width: 120px;
+
+        height: 70px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 10px;
+    }
+
+
+    .bdt-brand img {
+        max-width: 115px;
+
+        max-height: 52px;
+
+        object-fit: contain;
+    }
+
+
+    @keyframes bdtBrandScroll {
+
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+
+    }
+
+
+    /* =========================================================
+       IPARI ÉS VÁLLALATI FÓKUSZ
+       ========================================================= */
+
+    .bdt-business {
+        background:
+            linear-gradient(110deg,
+                rgba(5,23,38,.98),
+                rgba(7,62,99,.95)
+            ),
+            url("image/hatter.jpg") center/cover no-repeat;
+
+        color: white;
+    }
+
+
+    .bdt-business-grid {
+        display: grid;
+
+        grid-template-columns: .88fr 1.12fr;
+
+        gap: 70px;
+
+        align-items: center;
+    }
+
+
+    .bdt-business h2 {
+        color: white;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: clamp(32px,4vw,49px);
+
+        line-height: 1.1;
+
+        margin-bottom: 22px;
+    }
+
+
+    .bdt-business h2 span {
+        color: #70c8ff;
+    }
+
+
+    .bdt-business-text {
+        color: rgba(255,255,255,.70);
+
+        font-size: 17px;
+
+        line-height: 1.78;
+    }
+
+
+    .bdt-business-boxes {
+        display: grid;
+
+        grid-template-columns: repeat(2,1fr);
+
+        gap: 16px;
+    }
+
+
+    .bdt-business-box {
+        padding: 25px;
+
+        border-radius: 17px;
+
+        background: rgba(255,255,255,.075);
+
+        border: 1px solid rgba(255,255,255,.11);
+    }
+
+
+    .bdt-business-box strong {
+        display: block;
+
+        margin-bottom: 8px;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 15px;
+
+        color: white;
+    }
+
+
+    .bdt-business-box span {
+        color: rgba(255,255,255,.60);
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       MIÉRT MI
+       ========================================================= */
+
+    .bdt-why-grid {
+        display: grid;
+
+        grid-template-columns: repeat(4,1fr);
+
+        gap: 20px;
+    }
+
+
+    .bdt-why-card {
+        padding: 29px 23px;
+
+        text-align: center;
+
+        background: white;
+
+        border: 1px solid var(--bdt-border);
+
+        border-radius: 18px;
+
+        transition: .25s ease;
+    }
+
+
+    .bdt-why-card:hover {
+        transform: translateY(-6px);
+
+        box-shadow: var(--bdt-shadow);
+    }
+
+
+    .bdt-why-number {
+        margin-bottom: 12px;
+
+        color: var(--bdt-blue);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 14px;
+
+        font-weight: 900;
+    }
+
+
+    .bdt-why-card h3 {
+        margin-bottom: 10px;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 17px;
+    }
+
+
+    .bdt-why-card p {
+        color: var(--bdt-muted);
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    /* =========================================================
+       RÓLUNK
+       ========================================================= */
+
+    .bdt-about {
+        background: var(--bdt-light);
+    }
+
+
+    .bdt-about-grid {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 65px;
+
+        align-items: center;
+    }
+
+
+    .bdt-about-image {
+        min-height: 420px;
+
+        border-radius: 24px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        background:
+            linear-gradient(135deg,#071826,#075488);
+
+        box-shadow: var(--bdt-shadow);
+
+        padding: 45px;
+    }
+
+
+    .bdt-about-image img {
+        width: min(300px,80%);
+
+        filter: drop-shadow(0 15px 30px rgba(0,0,0,.22));
+    }
+
+
+    .bdt-kicker {
+        display: inline-block;
+
+        margin-bottom: 11px;
+
+        color: var(--bdt-blue);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 13px;
+
+        font-weight: 900;
+
+        letter-spacing: 1.5px;
+
+        text-transform: uppercase;
+    }
+
+
+    .bdt-about-content h2 {
+        margin-bottom: 20px;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: clamp(31px,4vw,46px);
+
+        line-height: 1.13;
+    }
+
+
+    .bdt-about-content p {
+        margin-bottom: 17px;
+
+        color: var(--bdt-muted);
+
+        font-size: 16px;
+
+        line-height: 1.8;
+    }
+
+
+    .bdt-checks {
+        display: grid;
+
+        gap: 12px;
+
+        margin-top: 23px;
+
+        list-style: none;
+    }
+
+
+    .bdt-checks li {
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 11px;
+
+        color: #405362;
+
+        font-size: 14px;
+
+        line-height: 1.55;
+    }
+
+
+    .bdt-check {
+        flex: 0 0 23px;
+
+        width: 23px;
+        height: 23px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #e6f7ef;
+
+        color: var(--bdt-green);
+
+        font-size: 12px;
+
+        font-weight: 900;
+    }
+
+
+    /* =========================================================
+       REFERENCIÁK
+       ========================================================= */
+
+    .bdt-references {
+        background: white;
+    }
+
+
+    .bdt-reference-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3,1fr);
+
+        gap: 22px;
+    }
+
+
+    .bdt-reference-card {
+        position: relative;
+
+        min-height: 265px;
+
+        overflow: hidden;
+
+        border-radius: 19px;
+
+        background: #091722;
+
+        border: 1px solid var(--bdt-border);
+    }
+
+
+    .bdt-reference-card img {
+        width: 100%;
+        height: 100%;
+
+        min-height: 265px;
+
+        object-fit: cover;
+
+        transition: .45s ease;
+    }
+
+
+    .bdt-reference-card:hover img {
+        transform: scale(1.06);
+    }
+
+
+    .bdt-reference-overlay {
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        padding: 40px 21px 21px;
+
+        background:
+            linear-gradient(
+                transparent,
+                rgba(3,14,24,.92)
+            );
+
+        color: white;
+    }
+
+
+    .bdt-reference-overlay h3 {
+        margin-bottom: 5px;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 17px;
+    }
+
+
+    .bdt-reference-overlay p {
+        color: rgba(255,255,255,.65);
+
+        font-size: 13px;
+    }
+
+
+    .bdt-reference-button {
+        text-align: center;
+
+        margin-top: 34px;
+    }
+
+
+    /* =========================================================
+       CTA
+       ========================================================= */
+
+    .bdt-cta {
+        padding: 80px 0;
+
+        background: var(--bdt-blue);
+    }
+
+
+    .bdt-cta-inner {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 35px;
+    }
+
+
+    .bdt-cta h2 {
+        margin-bottom: 9px;
+
+        color: white;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: clamp(28px,4vw,43px);
+
+        line-height: 1.12;
+    }
+
+
+    .bdt-cta p {
+        color: rgba(255,255,255,.76);
+
+        font-size: 17px;
+    }
+
+
+    /* =========================================================
+       GYIK
+       ========================================================= */
+
+    .bdt-faq {
+        background: var(--bdt-light);
+    }
+
+
+    .bdt-faq-list {
+        max-width: 860px;
+
+        margin: 0 auto;
+
+        display: grid;
+
+        gap: 13px;
+    }
+
+
+    .bdt-faq-item {
+        overflow: hidden;
+
+        background: white;
+
+        border: 1px solid var(--bdt-border);
+
+        border-radius: 14px;
+    }
+
+
+    .bdt-faq-question {
+        width: 100%;
+
+        padding: 20px 22px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 20px;
+
+        background: white;
+
+        border: 0;
+
+        text-align: left;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 15px;
+
+        font-weight: 700;
+
+        cursor: pointer;
+    }
+
+
+    .bdt-faq-question span {
+        color: var(--bdt-blue);
+
+        font-size: 23px;
+    }
+
+
+    .bdt-faq-answer {
+        display: none;
+
+        padding: 0 22px 22px;
+
+        color: var(--bdt-muted);
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .bdt-faq-item.open .bdt-faq-answer {
+        display: block;
+    }
+
+
+    /* =========================================================
+       KAPCSOLAT
+       ========================================================= */
+
+    .bdt-contact {
+        background: white;
+    }
+
+
+    .bdt-contact-grid {
+        display: grid;
+
+        grid-template-columns: 1fr .9fr;
+
+        gap: 45px;
+
+        align-items: start;
+    }
+
+
+    .bdt-form {
+        padding: 35px;
+
+        background: white;
+
+        border: 1px solid var(--bdt-border);
+
+        border-radius: 22px;
+
+        box-shadow: var(--bdt-shadow);
+    }
+
+
+    .bdt-form h3 {
+        margin-bottom: 8px;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 25px;
+    }
+
+
+    .bdt-form-intro {
+        margin-bottom: 25px;
+
+        color: var(--bdt-muted);
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .bdt-form-group {
+        margin-bottom: 17px;
+    }
+
+
+    .bdt-form-group label {
+        display: block;
+
+        margin-bottom: 7px;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 13px;
+
+        font-weight: 700;
+    }
+
+
+    .bdt-form-group input,
+    .bdt-form-group textarea {
+        width: 100%;
+
+        padding: 13px 14px;
+
+        outline: none;
+
+        border: 1px solid var(--bdt-border);
+
+        border-radius: 11px;
+
+        background: #fbfdff;
+
+        transition: .2s ease;
+    }
+
+
+    .bdt-form-group input:focus,
+    .bdt-form-group textarea:focus {
+        border-color: var(--bdt-blue);
+
+        box-shadow: 0 0 0 3px rgba(8,121,201,.08);
+    }
+
+
+    .bdt-form-group textarea {
+        min-height: 140px;
+
+        resize: vertical;
+    }
+
+
+    .bdt-form-submit {
+        width: 100%;
+
+        border: 0;
+    }
+
+
+    .bdt-contact-info {
+        padding-top: 15px;
+    }
+
+
+    .bdt-contact-info h2 {
+        margin: 9px 0 18px;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 42px;
+
+        line-height: 1.12;
+    }
+
+
+    .bdt-contact-info > p {
+        margin-bottom: 26px;
+
+        color: var(--bdt-muted);
+
+        font-size: 16px;
+
+        line-height: 1.75;
+    }
+
+
+    .bdt-contact-list {
+        display: grid;
+
+        gap: 14px;
+
+        margin-bottom: 27px;
+    }
+
+
+    .bdt-contact-item {
+        display: flex;
+
+        align-items: center;
+
+        gap: 14px;
+
+        padding: 16px;
+
+        border-radius: 14px;
+
+        border: 1px solid var(--bdt-border);
+
+        background: var(--bdt-light);
+    }
+
+
+    .bdt-contact-icon {
+        flex: 0 0 45px;
+
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+
+        background: white;
+
+        font-size: 19px;
+    }
+
+
+    .bdt-contact-item strong {
+        display: block;
+
+        margin-bottom: 3px;
+
+        color: var(--bdt-dark);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 13px;
+    }
+
+
+    .bdt-contact-item span,
+    .bdt-contact-item a {
+        color: var(--bdt-muted);
+
+        font-size: 14px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    .bdt-footer {
+        padding: 50px 0 25px;
+
+        background: var(--bdt-dark);
+
+        color: white;
+    }
+
+
+    .bdt-footer-grid {
+        display: grid;
+
+        grid-template-columns: 1.2fr 1fr 1fr;
+
+        gap: 50px;
+
+        padding-bottom: 38px;
+
+        border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+
+
+    .bdt-footer-logo img {
+        width: 175px;
+
+        margin-bottom: 17px;
+    }
+
+
+    .bdt-footer p {
+        color: rgba(255,255,255,.56);
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .bdt-footer h3 {
+        margin-bottom: 16px;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 15px;
+    }
+
+
+    .bdt-footer-links {
+        list-style: none;
+
+        display: grid;
+
+        gap: 9px;
+    }
+
+
+    .bdt-footer-links a {
+        color: rgba(255,255,255,.56);
+
+        font-size: 14px;
+
+        transition: .2s;
+    }
+
+
+    .bdt-footer-links a:hover {
+        color: white;
+    }
+
+
+    .bdt-footer-bottom {
+        padding-top: 22px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 20px;
+
+        color: rgba(255,255,255,.40);
+
+        font-size: 12px;
+    }
+
+
+    /* =========================================================
+       PRELOADER
+       ========================================================= */
+
+    .bdt-preloader {
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 99999;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 15px;
+
+        background: #07131e;
+
+        color: white;
+    }
+
+
+    .bdt-preloader img {
+        width: 180px;
+    }
+
+
+    .bdt-spinner {
+        width: 38px;
+        height: 38px;
+
+        border: 3px solid rgba(255,255,255,.18);
+
+        border-top-color: var(--bdt-blue);
+
+        border-radius: 50%;
+
+        animation: bdtSpin 1s linear infinite;
+    }
+
+
+    @keyframes bdtSpin {
+
+        to {
+            transform: rotate(360deg);
+        }
+
+    }
+
+
+    /* =========================================================
+       BACK TO TOP
+       ========================================================= */
+
+    .bdt-back-top {
+        position: fixed;
+
+        right: 20px;
+        bottom: 20px;
+
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        z-index: 900;
+
+        border-radius: 50%;
+
+        background: var(--bdt-blue);
+
+        color: white;
+
+        font-size: 20px;
+
+        box-shadow: 0 8px 25px rgba(0,0,0,.18);
+
+        transition: .25s ease;
+    }
+
+
+    .bdt-back-top:hover {
+        transform: translateY(-4px);
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 1050px) {
+
+        .bdt-menu {
+            gap: 17px;
+        }
+
+
+        .bdt-hero-inner {
+            gap: 40px;
+        }
+
+
+        .bdt-why-grid {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+    }
+
+
+    @media (max-width: 850px) {
+
+        .bdt-menu-button {
+            display: block;
+        }
+
+
+        .bdt-menu {
+            position: absolute;
+
+            top: 75px;
+
+            left: 20px;
+            right: 20px;
+
+            display: none;
+
+            flex-direction: column;
+
+            align-items: stretch;
+
+            padding: 15px;
+
+            background: #081521;
+
+            border: 1px solid rgba(255,255,255,.09);
+
+            border-radius: 15px;
+
+            box-shadow: 0 20px 40px rgba(0,0,0,.20);
+        }
+
+
+        .bdt-menu.open {
+            display: flex;
+        }
+
+
+        .bdt-menu a {
+            display: block;
+
+            padding: 11px;
+        }
+
+
+        .bdt-hero {
+            min-height: auto;
+
+            padding: 150px 0 80px;
+        }
+
+
+        .bdt-hero-inner {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-hero-panel {
+            max-width: 580px;
+        }
+
+
+        .bdt-business-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-about-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-about-image {
+            min-height: 330px;
+        }
+
+
+        .bdt-contact-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-footer-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+
+        .bdt-footer-grid > div:first-child {
+            grid-column: 1 / -1;
+        }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+        .bdt-container {
+            width: min(100% - 28px,1180px);
+        }
+
+
+        .bdt-section {
+            padding: 75px 0;
+        }
+
+
+        .bdt-hero h1 {
+            font-size: 42px;
+
+            letter-spacing: -1px;
+        }
+
+
+        .bdt-hero-text {
+            font-size: 17px;
+        }
+
+
+        .bdt-hero-buttons {
+            flex-direction: column;
+
+            align-items: stretch;
+        }
+
+
+        .bdt-button {
+            width: 100%;
+        }
+
+
+        .bdt-focus-strip {
+            margin-top: 0;
+
+            padding-top: 20px;
+
+            background: var(--bdt-light);
+        }
+
+
+        .bdt-focus-box {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-focus-item + .bdt-focus-item {
+            border-left: 0;
+
+            border-top: 1px solid var(--bdt-border);
+        }
+
+
+        .bdt-main-services-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-feature-card {
+            min-height: auto;
+
+            padding: 29px;
+        }
+
+
+        .bdt-feature-list {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-secondary-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-business-boxes {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-why-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-reference-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-cta-inner {
+            flex-direction: column;
+
+            align-items: flex-start;
+        }
+
+
+        .bdt-contact-info h2 {
+            font-size: 35px;
+        }
+
+
+        .bdt-form {
+            padding: 25px 20px;
+        }
+
+
+        .bdt-footer-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .bdt-footer-grid > div:first-child {
+            grid-column: auto;
+        }
+
+
+        .bdt-footer-bottom {
+            flex-direction: column;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
 <body>
-<canvas id="snow-canvas"></canvas>
-<div class="page-wrapper">
 
-    <header role="banner" class="site-header">
-        <nav class="sticky-nav" aria-label="Fő navigáció">
-            <div class="logo">
-                <a href="#hero"><img src="image/logo.png" alt="BDT PowerTech Logó" id="header-logo"></a>
-      </div>
-            <ul id="primary-navigation">
-                <li><a href="#hero" class="active">Kezdőlap</a></li>
-                <li><a href="#services">Szolgáltatások</a></li>
-                <li><a href="#why-us">Miért Mi?</a></li>
-                <li><a href="Referencia.html">Referenciák</a></li>
-                <li><a href="#about">Rólunk</a></li>
-                <li><a href="#faq">GY.I.K.</a></li>
-                <li><a href="#contact">Kapcsolat</a></li>
-            </ul>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-            <span class="sr-only">Menü</span>
-                <svg class="hamburger-icon" viewBox="0 0 100 80" width="25" height="25" fill="#0077cc">
-                    <rect width="100" height="15" rx="8"></rect>
-                    <rect y="30" width="100" height="15" rx="8"></rect>
-                    <rect y="60" width="100" height="15" rx="8"></rect>
-                </svg>
-                 <svg class="close-icon" viewBox="0 0 100 100" width="25" height="25" fill="#0077cc" style="display:none;">
-                    <rect x="10" y="42.5" width="80" height="15" rx="8" transform="rotate(45 50 50)"></rect>
-                    <rect x="10" y="42.5" width="80" height="15" rx="8" transform="rotate(-45 50 50)"></rect>
-  </svg>
-            </button>
-        </nav>
-    </header>
+```
+<!-- =========================================================
+     FEJLÉC
+     ========================================================= -->
 
+<header class="bdt-header">
 
+    <div class="bdt-container bdt-nav">
 
-    <main>
-        <section id="hero" class="hero-section scroll-target">
-            
-            <div class="hero-background-image" style="
-  background-image: url('image/logo.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-">
-</div>
-
-
-
-
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-                <h1 class="animate-letters-advanced">
-                    <span>B</span><span>D</span><span>T</span> <span>P</span><span>O</span><span>W</span>E<span>R</span>T<span>E</span>C<span>H</span>
-                    <br>
-          
-                   <h1>
-    <span>K</span><span>L</span><span>Í</span><span>M</span><span>A</span><span>-</span><span> </span><span>É</span><span>S</span><span> </span>
-    <span>E</span><span>L</span><span>E</span><span>K</span><span>T</span><span>R</span><span>O</span><span>M</span><span>O</span><span>S</span><span> </span>
-    <span>R</span><span>E</span><span>N</span><span>D</span><span>S</span><span>Z</span><span>E</span><span>R</span><span>E</span><span>K</span><span> </span><span>–</span><span> </span>
-    <span>P</span><span>O</span><span>N</span><span>T</span><span>O</span><span>S</span><span>A</span><span>N</span><span>,</span><span> </span>
-    <span>M</span><span>E</span><span>G</span><span>B</span><span>Í</span><span>Z</span><span>H</span><span>A</span><span>T</span><span>Ó</span><span>A</span><span>N</span>
-</h1>
-
-                <p class="animate-fadein-delayed" data-aos="fade-up" data-aos-delay="1000">Professzionális klímaszerelés a BDT PowerTech-től. Minőség és megbízhatóság, az Ön kényelmére fókuszálva.</p>
-                <a href="#contact" class="btn btn-primary btn-hero animate-pulse-grow" data-aos="fade-up" data-aos-delay="1200">
-                    Ajánlatkérés most
-                </a>
-            </div>
-            <a href="#services" class="scroll-down-indicator" aria-label="Görgessen a szolgáltatásokhoz">
-                 <svg width="30" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19M12 19L7 14M12 19L17 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 5V19M12 19L7 14M12 19L17 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: scrollIndicatorArrow 1.5s infinite 0.5s; opacity:0.5"/>
-                 </svg>
-            </a>
-        </section>
-
-
-<section class="brands">
-    <h2>Márkák, amelyekkel dolgozunk</h2>
-
-    <div class="slider">
-    <div class="slide-track">
-
-        <div class="brand">
-            <img src="image/gree.png" alt="Gree">
-        </div>
-
-        <div class="brand">
-            <img src="image/mdv.png" alt="MDV">
-        </div>
-
-        <div class="brand">
-            <img src="image/daikin.png" alt="Daikin">
-        </div>
-
-        <div class="brand">
-            <img src="image/midea.png" alt="Midea">
-        </div>
-
-        <div class="brand">
-            <img src="image/fisher.png" alt="Fisher">
-        </div>
-
-        <div class="brand">
-            <img src="image/polar.gif" alt="polar">
-        </div>
-
-
-        <div class="brand">
-            <img src="image/kinghome.png" alt="kinghome">
-        </div>
-
-
-        <div class="brand">
-            <img src="image/aux.png" alt="aux">
-        </div>
-
-
-        <div class="brand">
-            <img src="image/syen.png" alt="Syen">
-        </div>
-
-
-        <!-- másolat -->
-        <div class="brand">
-            <img src="image/gree.png" alt="Gree">
-        </div>
-
-        <div class="brand">
-            <img src="image/mdv.png" alt="MDV">
-        </div>
-
-        <div class="brand">
-            <img src="image/daikin.png" alt="Daikin">
-        </div>
-
-        <div class="brand">
-            <img src="image/midea.png" alt="Midea">
-        </div>
-
-        <div class="brand">
-            <img src="image/fisher.png" alt="Fisher">
-        </div>
-
-        <div class="brand">
-            <img src="image/syen.png" alt="Syen">
-        </div>
-
-        <div class="brand">
-            <img src="image/aux.png" alt="aux">
-        </div>
-        
-
-        <div class="brand">
-            <img src="image/polar.gif" alt="polar">
-        </div>
-
-
-        <div class="brand">
-            <img src="image/kinghome.png" alt="kinghome">
-        </div>
-
-    </div>
-</div>
-
-
-</section>
-
-
-
-
-
-        <section id="services" class="services-section scroll-target">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Mit kínálunk az Ön számára?</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Teljes körű klímatechnikai megoldások, az Ön igényeire fókuszálva, BDT PowerTech minőségben.</p>
-                 <div class="service-cards-container">
-                    <article class="service-card" data-aos="fade-up-right" data-aos-delay="200">
-                        <h3>Lakossági Klímaszerelés</h3>
-                        <p>Modern, energiatakarékos klímák telepítése otthonokba, fókuszált tanácsadással a maximális komfortért.</p>
-                       <a href="#contact" class="btn-details">Érdekel <span class="arrow">&rarr;</span></a>
-                    </article>
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="350">
-                         <h3>Irodai és Ipari Klímák</h3>
-                        <p>Nagyobb terek, üzlethelyiségek, irodaházak komplex klimatizálási rendszereinek tervezése és kivitelezése, BDT szakértelemmel.</p>
-                         <a href="#contact" class="btn-details">Érdekel <span class="arrow">&rarr;</span></a>
-                    </article>
-                    <article class="service-card" data-aos="fade-up-left" data-aos-delay="200">
-                         <h3>Karbantartás és Javítás</h3>
-                         <p>Rendszeres, szakszerű karbantartás a hosszú élettartamért. Gyors hibaelhárítás, hogy mindig hűs maradjon.</p>
-                        <a href="#contact" class="btn-details">Érdekel <span class="arrow">&rarr;</span></a>
-                    </article>
-
-
-
-
-
-
-
-                    <article class="service-card" data-aos="fade-up-left" data-aos-delay="200">
-                        <h3>Lakossági villanyszerelés</h3>
-                        <p>Kisebb javításoktól (konnektorcsere, világítás beszerelés) a teljes elektromos hálózat kiépítéséig – gyors, tiszta és megbízható megoldások otthonába.</p>
-                       <a href="#contact" class="btn-details">Érdekel <span class="arrow">&rarr;</span></a>
-                   </article> 
-
-
-                             <article class="service-card" data-aos="fade-up-left" data-aos-delay="200">
-                        <h3>Hálózatbővítés, új kiállások, okosan</h3>
-                       <p>Jön egy új sütő, klíma vagy lámpa, de nincs hova kötni? Segítünk új konnektorokat, kiállásokat kialakítani vagy bővíteni az áramhálózatot, hogy minden ott legyen, ahol kell.</p>
-                       <a href="#contact" class="btn-details">Érdekel <span class="arrow">&rarr;</span></a>
-                   </article> 
-
-
-
-                             <article class="service-card" data-aos="fade-up-left" data-aos-delay="200">
-                         <h3>Villanyhibák gyors megoldása</h3>
-                       <p>Nem működik egy kapcsoló? Elment az áram a fél lakásban? Ne barkácsolj egyedül – mi jövünk, megnézzük, megjavítjuk, és minden újra működik, ahogy kell. </p>
-                       <a href="#contact" class="btn-details">Érdekel <span class="arrow">&rarr;</span></a>
-                   </article> 
-
-                </div>
-            </div>
-        </section>
-
-        <section id="counter-section" class="counter-section scroll-target" data-aos="fade-in">
-             <div class="container">
-                <div class="counter-grid">
-                    </div>
-            </div>
-        </section>
-
-        <section id="why-us" class="why-us-section scroll-target">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Miért válasszon minket?</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                    Több, mint klíma- és villanyszerelés – elkötelezett figyelem az Ön kényelmére és biztonságára. </p>
-
-                <div class="why-us-grid">
-                    <div class="why-us-item" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Minőségi Garancia</h3>
-                         <p>Minden munkánkat a legmagasabb szakmai színvonalon végezzük, legyen szó klímaszerelésről vagy villanyszerelésről – a megbízhatóság nálunk alapérték.</p>
-                    </div>
-                    <div class="why-us-item" data-aos="fade-up" data-aos-delay="300">
-                        <h3>Ügyfélközpontú Fókusz</h3>
-                        <p>Az Ön igényei állnak a középpontban. Személyre szabott megoldásokat kínálunk, hogy tökéletesen elégedett legyen.</p>
-                    </div>
-                    <div class="why-us-item" data-aos="fade-up" data-aos-delay="400">
-                        <h3>Környezettudatos Technológia</h3>
-                        <p>Energiatakarékos klímák és korszerű villamos rendszerek – a fenntarthatóságot szem előtt tartva dolgozunk</p>
-                    </div>
-                    <div class="why-us-item" data-aos="fade-up" data-aos-delay="500">
-                         <h3>Szakértő Csapat</h3>
-                        <p>Magasan képzett, tapasztalt szakembereink garantálják a precíz és megbízható munkavégzést minden alkalommal.</p>
-                    </div>
-                 </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="portfolio-section scroll-target">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Fókusztávolságban: Munkáink</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Tekintse meg néhány kiemelt munkánkat, ahol a BDT PowerTech megbízható és precíz megoldásokat nyújtott klíma- és villanyszerelés terén</p>
-                <div class="portfolio-grid" data-aos="fade-up" data-aos-delay="200">
-                    <figure class="portfolio-item">
-                        <img src="image/p3.jpg" alt="Referencia munka 1 - Modern lakás klímával Budapesten">
-                         </figure>
-                    <figure class="portfolio-item">
-                        <img src="image/p1.jpg" alt="Referencia munka 2 - Irodaház hűtőrendszere Debrecenben">
-                         </figure>
-                    <figure class="portfolio-item">
-                        <img src="image/p2.jpg" alt="Referencia munka 3 - Családi ház hőszivattyús klíma Szegeden">
-                           </figure>
-                </div>
-                <div style="text-align: center; margin-top: 2rem;">
-                     <a href="referencia.html" class="btn btn-secondary" data-aos="fade-up">További referenciák és ajánlatkérés</a>
-                </div>
-            </div>
-        </section>
-
-<section class="facebook-reference">
-    <div class="facebook-box" class="hero-background-image" style="
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-">
-
-        <h2>Tekintse meg legfrissebb munkáinkat, a Facebookon is!</h2>
-
-        <p>
-            Folyamatosan frissülő Facebook oldalunkon megtekintheti
-            aktuális klímatelepítéseinket, karbantartásainkat,
-            javításainkat és referencia munkáinkat.
-        </p>
-
-        <a href="https://www.facebook.com/BDT.Powertech" target="_blank" class="facebook-btn">
-            ⓕ Látogasson el Facebook oldalunkra  ↪
+        <a href="#hero" class="bdt-logo">
+            <img src="image/logo.png" alt="BDT PowerTech">
         </a>
 
-    </div>
-</section>
 
-<section id="about" class="about-section scroll-target">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Rólunk: BDT PowerTech</h2>
-                <div class="about-content" data-aos="fade-up" data-aos-delay="100">
-                    <div class="about-text">
-                         <p>A BDT PowerTech egy lendületes, fiatal vállalkozás, amely villanyszerelési és klímaszerelési szolgáltatásokra specializálódott. Mi építünk a friss tudásra, naprakész technológiákra és a lelkiismeretes munkavégzésre.</p>
-                        <p>Célunk, hogy ügyfeleink számára biztonságos, energiatakarékos és hosszú távon megbízható megoldásokat nyújtsunk – legyen szó egy új elektromos hálózat kiépítéséről, egy klímaberendezés telepítéséről vagy akár egy kisebb javításról. Nálunk a kisebb munkák is ugyanolyan fontosak, mint a nagyobb projektek. </p>
-                        <ul>
-                            <li><span class="tick-icon">✓</span> Korszerű technológiák, modern megoldások</li>
-                            <li><span class="tick-icon">✓</span> Ügyfélközpontú hozzáállás, rugalmas kivitelezés</li>
-                             <li><span class="tick-icon">✓</span> Precizitás, garancia és megbízhatóság</li>
-                            <li><span class="tick-icon">✓</span> Környezettudatos szemlélet villamos és klímatechnikában</li>
-                        </ul>
-                     </div>
-                    <div class="about-image" data-aos="fade-left" data-aos-delay="300">
-                        <img src="image\logo.png" alt="BDT PowerTech Klímaszerelő csapat munka közben">
-                    </div>
+        <button
+            class="bdt-menu-button"
+            id="bdtMenuButton"
+            aria-label="Menü megnyitása">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <ul class="bdt-menu" id="bdtMenu">
+
+            <li>
+                <a href="#hero" class="active">
+                    Kezdőlap
+                </a>
+            </li>
+
+            <li>
+                <a href="#services">
+                    Szolgáltatások
+                </a>
+            </li>
+
+            <li>
+                <a href="#why-us">
+                    Miért mi?
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    Rólunk
+                </a>
+            </li>
+
+            <li>
+                <a href="referencia.html">
+                    Referenciák
+                </a>
+            </li>
+
+            <li>
+                <a href="#faq">
+                    GY.I.K.
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact" class="bdt-contact-button">
+                    Kapcsolat
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section id="hero" class="bdt-hero">
+
+        <div class="bdt-container bdt-hero-inner">
+
+
+            <div data-aos="fade-right">
+
+                <div class="bdt-hero-kicker">
+                    Műszaki szolgáltatások
                 </div>
-             </div>
-        </section>
 
-        <section id="faq" class="faq-section scroll-target">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Gyakran Ismételt Kérdések (GY.I.K.)</h2>
-                <div class="faq-accordion">
-                     <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                        <button class="faq-question">Milyen típusú klímákat telepítenek?</button>
-<div class="faq-answer">
-    <p>A BDT PowerTech különféle klímatípusokat telepít, beleértve a split, multi-split rendszereket, mobil és hőszivattyús megoldásokat is. Minden esetben az adott ingatlan adottságaihoz és az Ön igényeihez legjobban illeszkedő rendszert ajánljuk.</p>
-</div>
 
-<div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-    <button class="faq-question">Mennyi ideig tart egy klíma vagy villanyszerelési munka?</button>
-    <div class="faq-answer">
-        <p>Egy átlagos lakossági split klíma telepítése 3–5 órát vesz igénybe. Villanyszerelési munkák esetén ez a feladat típusától függ – egy lámpacsere akár 30 perc, míg egy teljes hálózat kiépítése több nap is lehet. Mindig törekszünk a gyors, tiszta és precíz munkavégzésre.</p>
-    </div>
-</div>
+                <h1>
 
-<div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-    <button class="faq-question">Milyen gyakran kell karbantartani a klímát vagy az elektromos rendszert?</button>
-    <div class="faq-answer">
-        <p>A klímaberendezéseket évente legalább egyszer javasolt karbantartani, lehetőleg a hűtési szezon előtt. Elektromos rendszerek esetén a rendszeres ellenőrzés és karbantartás szintén fontos a biztonság és a hosszú élettartam érdekében.</p>
-    </div>
-</div>
+                    <span class="blue">
+                        Villanyszerelés
+                    </span>
 
-<section id="contact" class="contact-section scroll-target">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Vegye fel velünk a kapcsolatot!</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Kérdése van, vagy egyedi ajánlatot szeretne? Keressen minket bizalommal, fókuszálunk Önre!</p>
+                    és
+
+                    <span class="blue">
+                        hűtéstechnika.
+                    </span>
+
+                    <br>
+
+                    <span class="white">
+                        BDT PowerTech.
+                    </span>
+
+                </h1>
+
+
+                <p class="bdt-hero-text">
+
+                    Ipari és lakossági villanyszerelés,
+                    elektromos hibakeresés és karbantartás,
+                    valamint hűtéstechnikai és klímatechnikai
+                    munkák egy helyen.
+
+                </p>
+
+
+                <div class="bdt-hero-buttons">
+
+                    <a
+                        href="#services"
+                        class="bdt-button bdt-button-primary">
+
+                        Szolgáltatásaink
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="bdt-button bdt-button-outline">
+
+                        Ajánlatkérés
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO JOBB OLDAL -->
+
+            <div
+                class="bdt-hero-panel"
+                data-aos="fade-left">
+
+
+                <div class="bdt-hero-panel-title">
+
+                    Fő szakterületeink
+
+                </div>
+
+
+                <div class="bdt-main-service">
+
+                    <div class="bdt-main-service-icon">
+                        ⚡
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Villanyszerelés
+                        </strong>
+
+                        <span>
+                            Ipari és lakossági villanyszerelés,
+                            hibakeresés és karbantartás.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bdt-main-service">
+
+                    <div class="bdt-main-service-icon">
+                        ❄
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Hűtéstechnika és klíma
+                        </strong>
+
+                        <span>
+                            Klímatechnikai és hűtéstechnikai
+                            telepítés, karbantartás és tisztítás.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bdt-main-service">
+
+                    <div class="bdt-main-service-icon">
+                        🧹
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Takarítás
+                        </strong>
+
+                        <span>
+                            Takarítás és létesítménytámogatás
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bdt-main-service">
+
+                    <div class="bdt-main-service-icon">
+                        👷‍♂️
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Munkaerő-közvetítés és biztosítás
+                        </strong>
+
+                        <span>
+                          segítjük partnereinket a megfelelő szakemberek és a szükséges kapacitás biztosításában.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         KIEMELT FŐ TERÜLETEK
+         ===================================================== -->
+
+                <section class="new-highlight">
+
+                    <div class="bdt-container">
+
+                        <div class="bdt-focus-box">
+                            <div class="bdt-focus-item">
+                                <div class="bdt-focus-icon">
+                                    ⚡
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Villanyszerelés
+                                    </strong>
+
+                                    <span>
+                                        Ipari, üzemi és lakossági
+                                        elektromos megoldások.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bdt-focus-item">
+                                <div class="bdt-focus-icon">
+                                    ❄
+                                </div>
+                                <div>
+                                    <strong>
+                                        Hűtéstechnika és klímatechnika
+                                    </strong>
+                                    <span>
+                                        Telepítés, karbantartás,
+                                        tisztítás és hibafeltárás.
+                                    </span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </section>
+
+
+    <!-- =====================================================
+         SZOLGÁLTATÁSOK
+         ===================================================== -->
+
+    <section
+        id="services"
+        class="bdt-section bdt-main-services">
+
+        <div class="bdt-container">
+
+
+            <h2
+                class="bdt-section-title"
+                data-aos="fade-up">
+
+                Fő szolgáltatásaink
+
+            </h2>
+
+
+            <p
+                class="bdt-section-subtitle"
+                data-aos="fade-up">
+
+                A BDT PowerTech elsődleges szakterületei
+                a villanyszerelés és a hűtéstechnika.
+                Ezek mellett további szolgáltatásokkal
+                is támogatjuk partnereinket.
+
+            </p>
+
+
+            <div class="bdt-main-services-grid">
+
+
+                <!-- =================================================
+                     VILLANYSZERELÉS
+                     ================================================= -->
+
+                <article
+                    class="bdt-feature-card"
+                    data-aos="fade-up">
+
+
+                    <div class="bdt-feature-card-main">
+
+                        <div class="bdt-feature-card-icon">
+                            ⚡
                         </div>
 
 
+                        <h3>
+                            Ipari és lakossági villanyszerelés
+                        </h3>
 
-  <div class="form-container">
-  <h2>Ajánlatkérés - kapcsolatfelvétel</h2>
-  <form action="https://formspree.io/f/movwjrva" method="POST">
-    
-    <!-- Irányítás sikeres küldés után -->
-    <input type="hidden" name="_redirect" value="https://bdt-powertech.hu/thx.html">
 
-    <label for="name">Teljes név:</label>
-    <input type="text" id="name" name="Név" required>
+                        <p>
 
-    <label for="phone">Telefonszám:</label>
-    <input type="tel" id="phone" name="Telefonszám" required>
+                            Elektromos rendszerek kiépítése,
+                            átalakítása, hibakeresése és
+                            karbantartása lakossági és ipari
+                            környezetben egyaránt.
 
-    <label for="email">E-mail cím:</label>
-    <input type="email" id="email" name="email" required>
+                        </p>
 
-    <label for="message">Megjegyzés:</label>
-    <textarea id="message" name="Megjegyzés" rows="4"></textarea>
 
-    <button type="submit">Küldés</button>
-  </form>
+                        <ul class="bdt-feature-list">
+
+                            <li>
+                                Ipari villanyszerelés
+                            </li>
+
+                            <li>
+                                Lakossági villanyszerelés
+                            </li>
+
+                            <li>
+                                Elektromos hibakeresés
+                            </li>
+
+                            <li>
+                                Elektromos karbantartás
+                            </li>
+
+                            <li>
+                                Hálózatbővítés
+                            </li>
+
+                            <li>
+                                Új kiállások kialakítása
+                            </li>
+
+                        </ul>
+
+
+                        <a
+                            href="#contact"
+                            class="bdt-feature-link">
+
+                            Villanyszerelési ajánlatkérés →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     HŰTÉSTECHNIKA
+                     ================================================= -->
+
+                <article
+                    class="bdt-feature-card"
+                    data-aos="fade-up"
+                    data-aos-delay="120">
+
+
+                    <div class="bdt-feature-card-main">
+
+                        <div class="bdt-feature-card-icon">
+                            ❄
+                        </div>
+
+
+                        <h3>
+                            Hűtéstechnika és klímatechnika
+                        </h3>
+
+
+                        <p>
+
+                            Klímatechnikai és hűtéstechnikai
+                            megoldások telepítéssel,
+                            karbantartással, tisztítással
+                            és hibafeltárással.
+
+                        </p>
+
+
+                        <ul class="bdt-feature-list">
+
+                            <li>
+                                Klímatelepítés
+                            </li>
+
+                            <li>
+                                Klímakarbantartás
+                            </li>
+
+                            <li>
+                                Klímatisztítás
+                            </li>
+
+                            <li>
+                                Hűtéstechnikai munkák
+                            </li>
+
+                            <li>
+                                Hibafeltárás
+                            </li>
+
+                            <li>
+                                Javítás és karbantartás
+                            </li>
+
+                        </ul>
+
+
+                        <a
+                            href="#contact"
+                            class="bdt-feature-link">
+
+                            Klíma- és hűtéstechnikai ajánlatkérés →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- =====================================================
+                 KIEGÉSZÍTŐ SZOLGÁLTATÁSOK
+                 ===================================================== -->
+
+            <div
+                class="bdt-secondary-heading"
+                data-aos="fade-up">
+
+                További szolgáltatásaink
+
+            </div>
+
+
+            <div class="bdt-secondary-grid">
+
+
+                <article
+                    class="bdt-secondary-card"
+                    data-aos="fade-up">
+
+
+                    <div class="bdt-secondary-icon">
+                        ✦
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Ipari, üzemi és lépcsőházi takarítás
+                        </h3>
+
+                        <p>
+                            Rendszeres vagy eseti takarítási
+                            feladatok vállalati és intézményi
+                            környezetben.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="bdt-secondary-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+
+                    <div class="bdt-secondary-icon">
+                        ●
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Munkaerő-szolgáltatás
+                        </h3>
+
+                        <p>
+                            Munkaerő-közvetítés és munkaerő
+                            biztosítása partnereink
+                            igényeihez igazodva.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         KLÍMAMÁRKÁK
+         ===================================================== -->
+
+    <section class="bdt-brands">
+
+        <div class="bdt-container">
+
+            <h2 class="bdt-brands-title">
+
+                Hűtéstechnikai márkák, amelyekkel dolgozunk
+
+            </h2>
+
+        </div>
+
+
+        <div class="bdt-brand-slider">
+
+            <div class="bdt-brand-track">
+
+
+                <div class="bdt-brand">
+                    <img src="image/gree.png" alt="Gree">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/mdv.png" alt="MDV">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/daikin.png" alt="Daikin">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/midea.png" alt="Midea">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/fisher.png" alt="Fisher">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/polar.gif" alt="Polar">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/kinghome.png" alt="Kinghome">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/aux.png" alt="AUX">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/syen.png" alt="Syen">
+                </div>
+
+
+                <!-- DUPLIKÁLT SOR -->
+
+                <div class="bdt-brand">
+                    <img src="image/gree.png" alt="Gree">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/mdv.png" alt="MDV">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/daikin.png" alt="Daikin">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/midea.png" alt="Midea">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/fisher.png" alt="Fisher">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/polar.gif" alt="Polar">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/kinghome.png" alt="Kinghome">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/aux.png" alt="AUX">
+                </div>
+
+                <div class="bdt-brand">
+                    <img src="image/syen.png" alt="Syen">
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         IPARI FÓKUSZ
+         ===================================================== -->
+
+    <section class="bdt-section bdt-business">
+
+        <div class="bdt-container bdt-business-grid">
+
+
+            <div data-aos="fade-right">
+
+                <h2>
+
+                    Műszaki megoldások
+                    <span>vállalati partnereknek.</span>
+
+                </h2>
+
+
+                <p class="bdt-business-text">
+
+                    Elsődleges szakmai területeinken,
+                    a villanyszerelésben és a hűtéstechnikában
+                    ipari és üzemi környezetben is
+                    vállalunk feladatokat.
+
+                    A kapcsolódó szolgáltatásokkal pedig
+                    további üzemeltetési igényekben is
+                    támogatni tudjuk partnereinket.
+
+                </p>
+
+            </div>
+
+
+            <div
+                class="bdt-business-boxes"
+                data-aos="fade-left">
+
+
+                <div class="bdt-business-box">
+
+                    <strong>
+                        Ipari villanyszerelés
+                    </strong>
+
+                    <span>
+                        Elektromos rendszerek,
+                        hibakeresés és karbantartási feladatok.
+                    </span>
+
+                </div>
+
+
+                <div class="bdt-business-box">
+
+                    <strong>
+                        Hűtéstechnika
+                    </strong>
+
+                    <span>
+                        Klímatechnikai és hűtéstechnikai
+                        munkák vállalati környezetben.
+                    </span>
+
+                </div>
+
+
+                <div class="bdt-business-box">
+
+                    <strong>
+                        Karbantartás
+                    </strong>
+
+                    <span>
+                        Rendszeres vagy eseti műszaki
+                        feladatok egyeztetés alapján.
+                    </span>
+
+                </div>
+
+
+                <div class="bdt-business-box">
+
+                    <strong>
+                        További kapacitás
+                    </strong>
+
+                    <span>
+                        Takarítási és munkaerő-szolgáltatási
+                        feladatokban is állunk partnereink rendelkezésére.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MIÉRT MI
+         ===================================================== -->
+
+    <section
+        id="why-us"
+        class="bdt-section">
+
+
+        <div class="bdt-container">
+
+            <h2
+                class="bdt-section-title"
+                data-aos="fade-up">
+
+                Miért a BDT PowerTech?
+
+            </h2>
+
+
+            <p
+                class="bdt-section-subtitle"
+                data-aos="fade-up">
+
+                A műszaki munkáknál a pontosság,
+                a megbízhatóság és a korrekt együttműködés
+                mellett kötelezzük el magunkat.
+
+            </p>
+
+
+            <div class="bdt-why-grid">
+
+
+                <article
+                    class="bdt-why-card"
+                    data-aos="fade-up">
+
+                    <div class="bdt-why-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Műszaki fókusz
+                    </h3>
+
+                    <p>
+                        Elsődleges területünk
+                        a villanyszerelés és a hűtéstechnika.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="bdt-why-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <div class="bdt-why-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Ipari és lakossági munkák
+                    </h3>
+
+                    <p>
+                        Kisebb lakossági feladatoktól
+                        az ipari munkákig.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="bdt-why-card"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <div class="bdt-why-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Karbantartás
+                    </h3>
+
+                    <p>
+                        Nemcsak kivitelezésben,
+                        hanem karbantartási feladatokban is
+                        gondolkodunk.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="bdt-why-card"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <div class="bdt-why-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Rugalmas együttműködés
+                    </h3>
+
+                    <p>
+                        A feladat jellegéhez és
+                        a partneri igényekhez igazodunk.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RÓLUNK
+         ===================================================== -->
+
+    <section
+        id="about"
+        class="bdt-section bdt-about">
+
+
+        <div class="bdt-container bdt-about-grid">
+
+
+            <div
+                class="bdt-about-image"
+                data-aos="fade-right">
+
+                <img
+                    src="image/logo.png"
+                    alt="BDT PowerTech">
+
+            </div>
+
+
+            <div
+                class="bdt-about-content"
+                data-aos="fade-left">
+
+
+                <span class="bdt-kicker">
+                    BDT PowerTech
+                </span>
+
+
+                <h2>
+
+                    Villanyszerelés és
+                    hűtéstechnika a középpontban.
+
+                </h2>
+
+
+                <p>
+
+                    A BDT PowerTech fő tevékenységi területe
+                    az ipari és lakossági villanyszerelés,
+                    valamint a hűtéstechnikai és
+                    klímatechnikai munkák.
+
+                </p>
+
+
+                <p>
+
+                    Elektromos hibakereséssel,
+                    karbantartással, klímatechnikai
+                    munkákkal és további
+                    létesítménytámogató szolgáltatásokkal
+                    állunk partnereink rendelkezésére.
+
+                </p>
+
+
+                <ul class="bdt-checks">
+
+
+                    <li>
+
+                        <span class="bdt-check">
+                            ✓
+                        </span>
+
+                        <span>
+                            Ipari és lakossági villanyszerelés
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="bdt-check">
+                            ✓
+                        </span>
+
+                        <span>
+                            Hűtéstechnika és klímatechnika
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="bdt-check">
+                            ✓
+                        </span>
+
+                        <span>
+                            Elektromos és gépészeti karbantartási feladatok
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <span class="bdt-check">
+                            ✓
+                        </span>
+
+                        <span>
+                            Vállalati és lakossági megrendelések
+                        </span>
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         REFERENCIÁK
+         ===================================================== -->
+
+    <section class="bdt-section bdt-references">
+
+
+        <div class="bdt-container">
+
+
+            <h2
+                class="bdt-section-title"
+                data-aos="fade-up">
+
+                Referenciáink
+
+            </h2>
+
+
+            <p
+                class="bdt-section-subtitle"
+                data-aos="fade-up">
+
+                Tekintse meg néhány korábbi munkánkat
+                és projektünket.
+
+            </p>
+
+
+            <div class="bdt-reference-grid">
+
+
+                <a
+                    href="referencia.html"
+                    class="bdt-reference-card"
+                    data-aos="fade-up">
+
+                    <img
+                        src="image/p3.jpg"
+                        alt="Villanyszerelési referencia">
+
+                    <div class="bdt-reference-overlay">
+
+                        <h3>
+                            Villanyszerelés
+                        </h3>
+
+                        <p>
+                            Megtekintés →
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="referencia.html"
+                    class="bdt-reference-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100">
+
+                    <img
+                        src="image/p1.jpg"
+                        alt="Hűtéstechnikai referencia">
+
+                    <div class="bdt-reference-overlay">
+
+                        <h3>
+                            Hűtéstechnika és klíma
+                        </h3>
+
+                        <p>
+                            Megtekintés →
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="referencia.html"
+                    class="bdt-reference-card"
+                    data-aos="fade-up"
+                    data-aos-delay="200">
+
+                    <img
+                        src="image/p2.jpg"
+                        alt="BDT PowerTech referencia">
+
+                    <div class="bdt-reference-overlay">
+
+                        <h3>
+                            További munkáink
+                        </h3>
+
+                        <p>
+                            Összes referencia →
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+
+            <div class="bdt-reference-button">
+
+                <a
+                    href="referencia.html"
+                    class="bdt-button bdt-button-primary">
+
+                    További referenciák
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+
+    <section class="bdt-cta">
+
+
+        <div class="bdt-container bdt-cta-inner">
+
+
+            <div>
+
+                <h2>
+                    Villanyszerelési vagy
+                    hűtéstechnikai feladata van?
+                </h2>
+
+                <p>
+                    Vegye fel velünk a kapcsolatot,
+                    és beszéljük át a feladatot.
+                </p>
+
+            </div>
+
+
+            <a
+                href="#contact"
+                class="bdt-button bdt-button-outline">
+
+                Ajánlatkérés
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GYIK
+         ===================================================== -->
+
+    <section
+        id="faq"
+        class="bdt-section bdt-faq">
+
+
+        <div class="bdt-container">
+
+
+            <h2 class="bdt-section-title">
+
+                Gyakran Ismételt Kérdések
+
+            </h2>
+
+
+            <p class="bdt-section-subtitle">
+
+                Néhány gyakori kérdés a
+                szolgáltatásainkkal kapcsolatban.
+
+            </p>
+
+
+            <div class="bdt-faq-list">
+
+
+                <div class="bdt-faq-item">
+
+                    <button class="bdt-faq-question">
+
+                        Milyen villanyszerelési munkákat vállalnak?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="bdt-faq-answer">
+
+                        Ipari és lakossági villanyszerelési,
+                        elektromos hibakeresési,
+                        karbantartási, hálózatbővítési
+                        és új kiállások kialakításával
+                        kapcsolatos feladatokat vállalunk.
+
+                    </div>
+
+                </div>
+
+
+                <div class="bdt-faq-item">
+
+                    <button class="bdt-faq-question">
+
+                        Milyen hűtéstechnikai munkákat vállalnak?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="bdt-faq-answer">
+
+                        Klímatechnikai és hűtéstechnikai
+                        munkákkal, többek között
+                        telepítéssel, karbantartással,
+                        tisztítással és hibafeltárással
+                        foglalkozunk.
+
+                    </div>
+
+                </div>
+
+
+                <div class="bdt-faq-item">
+
+                    <button class="bdt-faq-question">
+
+                        Vállalati partnereknek is dolgoznak?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="bdt-faq-answer">
+
+                        Igen. Villanyszerelési és
+                        hűtéstechnikai szolgáltatásainkat
+                        ipari, üzemi és vállalati környezetben
+                        is kínáljuk.
+
+                    </div>
+
+                </div>
+
+
+                <div class="bdt-faq-item">
+
+                    <button class="bdt-faq-question">
+
+                        Vállalnak rendszeres karbantartást?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="bdt-faq-answer">
+
+                        Igen. A műszaki feladatok mellett
+                        rendszeres karbantartási és további
+                        üzemeltetési feladatok is egyeztethetők.
+
+                    </div>
+
+                </div>
+
+
+                <div class="bdt-faq-item">
+
+                    <button class="bdt-faq-question">
+
+                        Milyen egyéb szolgáltatásokat kínálnak?
+
+                        <span>+</span>
+
+                    </button>
+
+                    <div class="bdt-faq-answer">
+
+                        Ipari, üzemi és lépcsőházi takarítást,
+                        valamint munkaerő-közvetítést és
+                        munkaerő biztosítását is kínáljuk.
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         KAPCSOLAT
+         ===================================================== -->
+
+    <section
+        id="contact"
+        class="bdt-section bdt-contact">
+
+
+        <div class="bdt-container bdt-contact-grid">
+
+
+            <!-- ŰRLAP -->
+
+            <div
+                class="bdt-form"
+                data-aos="fade-right">
+
+
+                <h3>
+                    Ajánlatkérés
+                </h3>
+
+
+                <p class="bdt-form-intro">
+
+                    Írja meg röviden, milyen munkára
+                    vagy szolgáltatásra van szüksége.
+
+                </p>
+
+
+                <form
+                    action="https://formspree.io/f/movwjrva"
+                    method="POST">
+
+
+                    <input
+                        type="hidden"
+                        name="_redirect"
+                        value="https://bdt-powertech.hu/thx.html">
+
+
+                    <div class="bdt-form-group">
+
+                        <label for="name">
+                            Teljes név
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="Név"
+                            required>
+
+                    </div>
+
+
+                    <div class="bdt-form-group">
+
+                        <label for="phone">
+                            Telefonszám
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="Telefonszám"
+                            required>
+
+                    </div>
+
+
+                    <div class="bdt-form-group">
+
+                        <label for="email">
+                            E-mail cím
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required>
+
+                    </div>
+
+
+                    <div class="bdt-form-group">
+
+                        <label for="message">
+                            Üzenet
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="Megjegyzés"
+                            rows="5"
+                            placeholder="Írja le röviden, milyen munkára van szüksége..."></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="bdt-button bdt-button-primary bdt-form-submit">
+
+                        Üzenet elküldése
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+            <!-- INFORMÁCIÓ -->
+
+            <div
+                class="bdt-contact-info"
+                data-aos="fade-left">
+
+
+                <span class="bdt-kicker">
+                    Kapcsolat
+                </span>
+
+
+                <h2>
+
+                    Beszéljünk
+                    a feladatról.
+
+                </h2>
+
+
+                <p>
+
+                    Legyen szó villanyszerelésről,
+                    hűtéstechnikáról, klímáról vagy
+                    vállalati szolgáltatásról,
+                    keressen minket bizalommal.
+
+                </p>
+
+
+                <div class="bdt-contact-list">
+
+
+                    <div class="bdt-contact-item">
+
+                        <div class="bdt-contact-icon">
+                            ☎
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Telefon
+                            </strong>
+
+                            <a href="tel:+36304678022">
+                                +36 (30) 467-8022
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="bdt-contact-item">
+
+                        <div class="bdt-contact-icon">
+                            ✉
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                E-mail
+                            </strong>
+
+                            <a href="mailto:bdt.powertech@gmail.com">
+                                bdt.powertech@gmail.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="bdt-contact-item">
+
+                        <div class="bdt-contact-icon">
+                            f
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Facebook
+                            </strong>
+
+                            <a
+                                href="https://www.facebook.com/BDT.Powertech"
+                                target="_blank"
+                                rel="noopener">
+
+                                BDT PowerTech
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <a
+                    href="https://www.facebook.com/BDT.Powertech"
+                    target="_blank"
+                    rel="noopener"
+                    class="bdt-button bdt-button-primary">
+
+                    Facebook oldal megtekintése
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="bdt-footer">
+
+
+    <div class="bdt-container">
+
+
+        <div class="bdt-footer-grid">
+
+
+            <div>
+
+                <a
+                    href="#hero"
+                    class="bdt-footer-logo">
+
+                    <img
+                        src="image/logo.png"
+                        alt="BDT PowerTech">
+
+                </a>
+
+
+                <p>
+
+                    Villanyszerelés,
+                    hűtéstechnika és
+                    további létesítménytámogató
+                    szolgáltatások.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Szolgáltatások
+                </h3>
+
+
+                <ul class="bdt-footer-links">
+
+                    <li>
+                        <a href="#services">
+                            Villanyszerelés
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Hűtéstechnika és klíma
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Takarítás
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Munkaerő-szolgáltatás
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Információ
+                </h3>
+
+
+                <ul class="bdt-footer-links">
+
+                    <li>
+                        <a href="#about">
+                            Rólunk
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="referencia.html">
+                            Referenciák
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#faq">
+                            GY.I.K.
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Kapcsolat
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="adatvedelem.html">
+                            Adatvédelmi Nyilatkozat
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="bdt-footer-bottom">
+
+            <span>
+                &copy;
+                <span id="bdtCurrentYear"></span>
+                BDT PowerTech. Minden jog fenntartva.
+            </span>
+
+
+            <span>
+                Villanyszerelés és hűtéstechnika
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     BACK TO TOP
+     ========================================================= -->
+
+<a
+    href="#hero"
+    class="bdt-back-top"
+    aria-label="Vissza a tetejére">
+
+    ↑
+
+</a>
+
+
+<!-- =========================================================
+     PRELOADER
+     ========================================================= -->
+
+<div class="bdt-preloader">
+
+    <img
+        src="image/logo.png"
+        alt="BDT PowerTech">
+
+    <div class="bdt-spinner"></div>
+
+    <p style="font-size:13px;opacity:.6;">
+        BDT PowerTech betöltés...
+    </p>
+
 </div>
 
 
-                    <div class="contact-info" data-aos="fade-left" data-aos-delay="300">
-                        <h3>Elérhetőségeink:</h3>
-                        <p><img src="image/phone.png" alt="Telefon" class="contact-icon"> +36 (30) 467-8022</p>
-                        <p><img src="image/mail.png" alt="Email" class="contact-icon"> bdt.powertech@gmail.com</p>
-                        <h4>Kövessen Minket (a hűvös nyomokon):</h4>
-                         <div class="social-icons">
-                            <a href="https://www.facebook.com/profile.php?id=61576967496470&sk=about" aria-label="Facebook"><img src="image/facebook.png" alt="Facebook"></a>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<!-- AOS -->
 
-    <footer role="contentinfo" class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-logo">
-                 <img src="image/logo.png" alt="BDT PowerTech Footer Logó" id="footer-logo-img">
-            </div>
-            <div class="footer-text">
-                <p>&copy; <span id="currentYear"></span> BDT PowerTech . Minden jog fenntartva.</p>
-                <p><a href="adatvedelem.html">Adatvédelmi Nyilatkozat</a> | <a href="#faq">GY.I.K.</a></p> </div>
-        </div>
-    </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <a href="#hero" class="back-to-top" aria-label="Vissza a tetejére">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-    </a>
 
-    <div class="preloader">
-        <div class="spinner"></div>
-        <p>BDT PowerTech Betöltés...</p>
-    </div>
+<script>
 
-</div> <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    /* =========================================================
+       AOS
+       ========================================================= */
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        if (typeof AOS !== "undefined") {
+
+            AOS.init({
+
+                duration: 750,
+
+                once: true,
+
+                offset: 50
+
+            });
+
+        }
+
+    });
+
+
+    /* =========================================================
+       MOBIL MENÜ
+       ========================================================= */
+
+    const bdtMenuButton =
+        document.getElementById("bdtMenuButton");
+
+    const bdtMenu =
+        document.getElementById("bdtMenu");
+
+
+    if (bdtMenuButton && bdtMenu) {
+
+        bdtMenuButton.addEventListener("click", function () {
+
+            bdtMenu.classList.toggle("open");
+
+        });
+
+
+        bdtMenu.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                bdtMenu.classList.remove("open");
+
+            });
+
+        });
+
+    }
+
+
+    /* =========================================================
+       GYIK
+       ========================================================= */
+
+    document
+        .querySelectorAll(".bdt-faq-question")
+        .forEach(function (question) {
+
+
+            question.addEventListener("click", function () {
+
+                const item = this.parentElement;
+
+                const alreadyOpen =
+                    item.classList.contains("open");
+
+
+                document
+                    .querySelectorAll(".bdt-faq-item")
+                    .forEach(function (other) {
+
+                        other.classList.remove("open");
+
+                        const icon =
+                            other.querySelector(
+                                ".bdt-faq-question span"
+                            );
+
+                        if (icon) {
+                            icon.textContent = "+";
+                        }
+
+                    });
+
+
+                if (!alreadyOpen) {
+
+                    item.classList.add("open");
+
+                    const icon =
+                        this.querySelector("span");
+
+                    if (icon) {
+                        icon.textContent = "−";
+                    }
+
+                }
+
+            });
+
+        });
+
+
+    /* =========================================================
+       AKTUÁLIS ÉV
+       ========================================================= */
+
+    const year =
+        document.getElementById("bdtCurrentYear");
+
+
+    if (year) {
+
+        year.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =========================================================
+       PRELOADER
+       ========================================================= */
+
+    window.addEventListener("load", function () {
+
+        const preloader =
+            document.querySelector(".bdt-preloader");
+
+
+        if (preloader) {
+
+            preloader.style.opacity = "0";
+
+            preloader.style.transition =
+                "opacity .4s ease";
+
+
+            setTimeout(function () {
+
+                preloader.style.display =
+                    "none";
+
+            }, 450);
+
+        }
+
+    });
+
+
+    /* =========================================================
+       AKTÍV NAVIGÁCIÓ
+       ========================================================= */
+
+    const bdtNavLinks =
+        document.querySelectorAll(
+            '.bdt-menu a[href^="#"]'
+        );
+
+
+    window.addEventListener("scroll", function () {
+
+        let currentSection = "";
+
+
+        document
+            .querySelectorAll("main section[id]")
+            .forEach(function (section) {
+
+                const top =
+                    section.offsetTop - 180;
+
+                const height =
+                    section.offsetHeight;
+
+
+                if (
+                    window.scrollY >= top &&
+                    window.scrollY < top + height
+                ) {
+
+                    currentSection =
+                        section.getAttribute("id");
+
+                }
+
+            });
+
+
+        bdtNavLinks.forEach(function (link) {
+
+            link.classList.remove("active");
+
+
+            if (
+                link.getAttribute("href") ===
+                "#" + currentSection
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+
+    /* =========================================================
+       SMOOTH SCROLL
+       ========================================================= */
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(function (anchor) {
+
+
+            anchor.addEventListener("click", function (event) {
+
+                const targetId =
+                    this.getAttribute("href");
+
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+
+                    return;
+
+                }
+
+
+                const target =
+                    document.querySelector(targetId);
+
+
+                if (!target) {
+
+                    return;
+
+                }
+
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "start"
+
+                });
+
+            });
+
+        });
+
+</script>
+
+
+<!--
+    A meglévő script.js megtartható,
+    amennyiben más oldalakhoz szükséges funkciókat tartalmaz.
+-->
+
+<script src="script.js"></script>
+```
+
 </body>
+
 </html>
