@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#06121d">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
 <title>BDT PowerTech | Villanyszerelés és hűtéstechnika</title>
 
 <meta name="description"
@@ -1498,7 +1498,6 @@
         font-size: 17px;
     }
 
-
     /* =========================================================
        GYIK
        ========================================================= */
@@ -2222,14 +2221,528 @@
 
     }
 
+
+    /* =========================================================
+       BDT POWERTECH - MOBIL / TABLET JAVÍTÁS
+       Ez a blokk az index.html beágyazott stílusait biztonságosan
+       felülírja kisebb kijelzőkön.
+       ========================================================= */
+
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    main,
+    section,
+    header,
+    footer,
+    .bdt-container {
+        max-width: 100%;
+    }
+
+    .bdt-container {
+        min-width: 0;
+    }
+
+    .bdt-menu-button {
+        flex: 0 0 auto;
+        position: relative;
+        z-index: 10001;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .bdt-menu-button:focus-visible {
+        outline: 2px solid #65c4ff;
+        outline-offset: 3px;
+    }
+
+    .bdt-menu a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    @media (max-width: 1050px) {
+        .bdt-nav {
+            gap: 16px;
+        }
+
+        .bdt-menu {
+            gap: 15px;
+        }
+
+        .bdt-menu a {
+            font-size: 13px;
+        }
+
+        .bdt-contact-button {
+            padding: 0 14px;
+        }
+
+        .bdt-hero-inner,
+        .bdt-business-grid {
+            gap: 35px;
+        }
+
+        .bdt-feature-card {
+            padding: 32px;
+        }
+    }
+
+    @media (max-width: 850px) {
+        .bdt-header {
+            min-height: 70px;
+        }
+
+        .bdt-nav {
+            min-height: 70px;
+            width: min(100% - 28px, 1180px);
+        }
+
+        .bdt-logo {
+            min-width: 0;
+        }
+
+        .bdt-logo img {
+            width: 135px;
+            max-width: 135px;
+            height: auto;
+        }
+
+        .bdt-menu-button {
+            display: block;
+        }
+
+        .bdt-menu {
+            position: fixed;
+            top: 70px;
+            left: 14px;
+            right: 14px;
+            width: auto;
+            max-height: calc(100dvh - 84px);
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 4px;
+            padding: 12px;
+            margin: 0;
+            background: rgba(8, 21, 33, 0.98);
+            border: 1px solid rgba(255,255,255,.10);
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.35);
+        }
+
+        .bdt-menu.open {
+            display: flex;
+        }
+
+        .bdt-menu li {
+            width: 100%;
+        }
+
+        .bdt-menu a,
+        .bdt-menu .bdt-contact-button {
+            width: 100%;
+            min-height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 14px;
+            border-radius: 10px;
+        }
+
+        .bdt-menu a::after {
+            display: none;
+        }
+
+        .bdt-menu a:hover,
+        .bdt-menu a.active {
+            background: rgba(255,255,255,.07);
+        }
+
+        .bdt-menu .bdt-contact-button {
+            justify-content: center;
+            margin-top: 4px;
+        }
+
+        .bdt-hero {
+            min-height: auto;
+            padding: 120px 0 55px;
+        }
+
+        .bdt-hero-inner {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 35px;
+        }
+
+        .bdt-hero h1 {
+            max-width: 100%;
+            font-size: clamp(36px, 9vw, 54px);
+            line-height: 1.05;
+            letter-spacing: -1.4px;
+            overflow-wrap: anywhere;
+        }
+
+        .bdt-hero-text {
+            max-width: 100%;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .bdt-hero-buttons {
+            width: 100%;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .bdt-button {
+            width: 100%;
+            min-height: 52px;
+        }
+
+        .bdt-hero-panel {
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .bdt-main-service {
+            min-width: 0;
+            padding: 15px;
+            align-items: flex-start;
+        }
+
+        .bdt-main-service-icon {
+            flex: 0 0 44px;
+            width: 44px;
+            height: 44px;
+        }
+
+        .bdt-main-service > div:last-child {
+            min-width: 0;
+        }
+
+        .bdt-main-service strong,
+        .bdt-main-service span {
+            overflow-wrap: anywhere;
+        }
+
+        .bdt-focus-strip {
+            margin-top: 0;
+            padding: 18px 0 0;
+            background: var(--bdt-light);
+        }
+
+        .bdt-focus-box {
+            grid-template-columns: 1fr;
+            border-radius: 17px;
+        }
+
+        .bdt-focus-item {
+            min-width: 0;
+            padding: 22px 18px;
+            align-items: flex-start;
+        }
+
+        .bdt-focus-item + .bdt-focus-item {
+            border-left: 0;
+            border-top: 1px solid var(--bdt-border);
+        }
+
+        .bdt-focus-item > div:last-child {
+            min-width: 0;
+        }
+
+        .bdt-focus-item strong,
+        .bdt-focus-item span {
+            overflow-wrap: anywhere;
+        }
+
+        .bdt-main-services-grid,
+        .bdt-secondary-grid,
+        .bdt-business-grid,
+        .bdt-contact-grid,
+        .bdt-about-grid {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .bdt-feature-card {
+            min-height: auto;
+            padding: 27px 22px;
+        }
+
+        .bdt-feature-card h3 {
+            font-size: 23px;
+            overflow-wrap: anywhere;
+        }
+
+        .bdt-feature-card p {
+            font-size: 15px;
+        }
+
+        .bdt-feature-list {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .bdt-secondary-card {
+            min-width: 0;
+            padding: 21px;
+            align-items: flex-start;
+        }
+
+        .bdt-secondary-card > div:last-child {
+            min-width: 0;
+        }
+
+        .bdt-secondary-card h3,
+        .bdt-secondary-card p {
+            overflow-wrap: anywhere;
+        }
+
+        .bdt-business-boxes {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .bdt-business h2,
+        .bdt-contact-info h2,
+        .bdt-about-content h2 {
+            overflow-wrap: anywhere;
+        }
+
+        .bdt-about-image {
+            min-height: 280px;
+            padding: 30px;
+        }
+
+        .bdt-about-image img {
+            width: min(260px, 85%);
+        }
+
+        .bdt-reference-grid {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .bdt-reference-card {
+            min-height: 240px;
+        }
+
+        .bdt-reference-card img {
+            min-height: 240px;
+        }
+
+        .bdt-cta-inner {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .bdt-cta-inner > div {
+            min-width: 0;
+        }
+
+        .bdt-contact-info {
+            padding-top: 0;
+        }
+
+        .bdt-form {
+            padding: 25px 20px;
+        }
+
+        .bdt-form-group input,
+        .bdt-form-group textarea {
+            font-size: 16px;
+        }
+
+        .bdt-footer-grid {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .bdt-footer-grid > div:first-child {
+            grid-column: auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .bdt-container {
+            width: calc(100% - 24px);
+        }
+
+        .bdt-section {
+            padding: 58px 0;
+        }
+
+        .bdt-section-title {
+            font-size: clamp(28px, 8vw, 36px);
+            overflow-wrap: anywhere;
+        }
+
+        .bdt-section-subtitle {
+            margin-bottom: 35px;
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        .bdt-hero {
+            padding-top: 105px;
+            padding-bottom: 45px;
+        }
+
+        .bdt-hero-kicker {
+            max-width: 100%;
+            padding: 8px 12px;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .bdt-hero h1 {
+            font-size: clamp(33px, 10vw, 45px);
+            letter-spacing: -1px;
+        }
+
+        .bdt-hero-text {
+            font-size: 16px;
+        }
+
+        .bdt-hero-panel {
+            padding: 16px;
+        }
+
+        .bdt-hero-panel-title {
+            font-size: 15px;
+        }
+
+        .bdt-main-service {
+            gap: 11px;
+        }
+
+        .bdt-main-service strong {
+            font-size: 14px;
+        }
+
+        .bdt-main-service span {
+            font-size: 12px;
+        }
+
+        .bdt-feature-card {
+            padding: 23px 18px;
+            border-radius: 18px;
+        }
+
+        .bdt-feature-card-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 18px;
+            font-size: 27px;
+        }
+
+        .bdt-feature-card h3 {
+            font-size: 21px;
+        }
+
+        .bdt-secondary-card {
+            padding: 18px;
+        }
+
+        .bdt-secondary-icon {
+            flex: 0 0 44px;
+            width: 44px;
+            height: 44px;
+        }
+
+        .bdt-brands {
+            padding: 45px 0;
+        }
+
+        .bdt-brands-title {
+            font-size: 19px;
+            padding: 0 10px;
+        }
+
+        .bdt-brand-track {
+            gap: 25px;
+        }
+
+        .bdt-brand {
+            min-width: 100px;
+            height: 60px;
+        }
+
+        .bdt-brand img {
+            max-width: 95px;
+            max-height: 45px;
+        }
+
+        .bdt-business-text {
+            font-size: 16px;
+        }
+
+        .bdt-business-box {
+            padding: 20px;
+        }
+
+        .bdt-about-image {
+            min-height: 230px;
+            padding: 25px;
+        }
+
+        .bdt-contact-info h2 {
+            font-size: 32px;
+        }
+
+        .bdt-contact-item {
+            align-items: flex-start;
+            padding: 14px;
+        }
+
+        .bdt-contact-item > div:last-child {
+            min-width: 0;
+        }
+
+        .bdt-contact-item a,
+        .bdt-contact-item span {
+            overflow-wrap: anywhere;
+        }
+
+        .bdt-footer-bottom {
+            flex-direction: column;
+        }
+
+        .bdt-back-top {
+            right: 14px;
+            bottom: 14px;
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
 </style>
-```
 
 </head>
 
 <body>
 
-```
 <!-- =========================================================
      FEJLÉC
      ========================================================= -->
@@ -2246,7 +2759,7 @@
         <button
             class="bdt-menu-button"
             id="bdtMenuButton"
-            aria-label="Menü megnyitása">
+            aria-label="Menü megnyitása" aria-controls="bdtMenu" aria-expanded="false">
 
             <span></span>
             <span></span>
@@ -4033,7 +4546,17 @@
 
         bdtMenuButton.addEventListener("click", function () {
 
-            bdtMenu.classList.toggle("open");
+            const isOpen = bdtMenu.classList.toggle("open");
+
+            bdtMenuButton.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            bdtMenuButton.setAttribute(
+                "aria-label",
+                isOpen ? "Menü bezárása" : "Menü megnyitása"
+            );
 
         });
 
@@ -4043,12 +4566,34 @@
             link.addEventListener("click", function () {
 
                 bdtMenu.classList.remove("open");
+                bdtMenuButton.setAttribute("aria-expanded", "false");
+                bdtMenuButton.setAttribute("aria-label", "Menü megnyitása");
 
             });
 
         });
 
     }
+
+
+    /* =========================================================
+       ESCAPE - MOBIL MENÜ BEZÁRÁSA
+       ========================================================= */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape" && bdtMenu && bdtMenu.classList.contains("open")) {
+
+            bdtMenu.classList.remove("open");
+
+            if (bdtMenuButton) {
+                bdtMenuButton.setAttribute("aria-expanded", "false");
+                bdtMenuButton.setAttribute("aria-label", "Menü megnyitása");
+            }
+
+        }
+
+    });
 
 
     /* =========================================================
@@ -4268,7 +4813,6 @@
 -->
 
 <script src="script.js"></script>
-```
 
 </body>
 
