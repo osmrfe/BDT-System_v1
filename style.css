@@ -1531,3 +1531,482 @@ body.nav-open {
     visibility: visible !important;
     opacity: 1 !important;
 }
+
+/* =========================================================
+   BDT POWERTECH – MOBILIS ÉS TABLET BIZTONSÁGI JAVÍTÁSOK
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+}
+
+/* A globális legacy button szabály ne mozdítsa el a BDT mobilmenü gombját. */
+.bdt-menu-button {
+    flex: 0 0 auto;
+    margin-top: 0 !important;
+    padding: 0 !important;
+}
+
+.bdt-container,
+.bdt-nav,
+.bdt-hero-inner,
+.bdt-contact-grid,
+.bdt-about-grid,
+.bdt-business-grid,
+.bdt-footer-grid {
+    min-width: 0;
+}
+
+.bdt-hero-inner > *,
+.bdt-contact-grid > *,
+.bdt-about-grid > *,
+.bdt-business-grid > *,
+.bdt-footer-grid > * {
+    min-width: 0;
+}
+
+.bdt-form,
+.bdt-feature-card,
+.bdt-secondary-card,
+.bdt-business-box,
+.bdt-why-card,
+.bdt-reference-card,
+.bdt-contact-info,
+.bdt-about-image,
+.bdt-hero-panel {
+    max-width: 100%;
+}
+
+.bdt-feature-card,
+.bdt-secondary-card,
+.bdt-business-box,
+.bdt-why-card,
+.bdt-reference-card,
+.bdt-form,
+.bdt-contact-info {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+@media (max-width: 1050px) {
+
+    .bdt-nav {
+        gap: 16px;
+    }
+
+    .bdt-menu {
+        gap: 16px;
+    }
+
+    .bdt-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .bdt-hero-panel {
+        width: 100%;
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .bdt-business-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .bdt-about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .bdt-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .bdt-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+
+    .bdt-container {
+        width: min(100% - 28px, 1180px);
+    }
+
+    .bdt-nav {
+        min-height: 75px;
+        position: relative;
+    }
+
+    .bdt-logo {
+        min-width: 0;
+    }
+
+    .bdt-logo img {
+        width: 140px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .bdt-menu-button {
+        display: block !important;
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px;
+        min-height: 46px;
+        background: rgba(255,255,255,.05) !important;
+        color: #fff;
+    }
+
+    .bdt-menu {
+        position: fixed !important;
+        top: 75px !important;
+        left: 14px !important;
+        right: 14px !important;
+        width: auto !important;
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        display: none !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        padding: 10px !important;
+        background: rgba(8,21,33,.98) !important;
+        border: 1px solid rgba(255,255,255,.10);
+        border-radius: 16px;
+        box-shadow: 0 20px 45px rgba(0,0,0,.28);
+    }
+
+    .bdt-menu.open {
+        display: flex !important;
+    }
+
+    .bdt-menu li {
+        width: 100%;
+    }
+
+    .bdt-menu a {
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        min-height: 46px;
+        padding: 12px 13px !important;
+        font-size: 15px !important;
+    }
+
+    .bdt-contact-button {
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .bdt-hero {
+        min-height: auto;
+        padding: 135px 0 75px;
+    }
+
+    .bdt-hero-inner {
+        grid-template-columns: 1fr !important;
+        gap: 35px;
+    }
+
+    .bdt-hero h1 {
+        max-width: 100%;
+        font-size: clamp(38px, 8vw, 58px) !important;
+        letter-spacing: -1.3px;
+        overflow-wrap: anywhere;
+    }
+
+    .bdt-hero-text {
+        max-width: 100%;
+        font-size: 17px !important;
+    }
+
+    .bdt-hero-buttons {
+        width: 100%;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .bdt-button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .bdt-focus-strip {
+        margin-top: 0;
+        padding-top: 18px;
+        background: var(--bdt-light);
+    }
+
+    .bdt-focus-box {
+        grid-template-columns: 1fr !important;
+    }
+
+    .bdt-focus-item {
+        padding: 23px 20px;
+    }
+
+    .bdt-focus-item + .bdt-focus-item {
+        border-left: 0 !important;
+        border-top: 1px solid var(--bdt-border);
+    }
+
+    .bdt-main-services-grid,
+    .bdt-secondary-grid,
+    .bdt-business-boxes,
+    .bdt-why-grid,
+    .bdt-reference-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    #dynamic-reference-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 18px !important;
+    }
+
+    .bdt-feature-card {
+        min-height: auto;
+        padding: 30px 24px;
+    }
+
+    .bdt-feature-list {
+        grid-template-columns: 1fr !important;
+    }
+
+    .bdt-about-image {
+        min-height: 0;
+    }
+
+    .bdt-form {
+        padding: 26px 20px !important;
+    }
+
+    .bdt-contact-item {
+        min-width: 0;
+    }
+
+    .bdt-contact-item > div:last-child {
+        min-width: 0;
+    }
+
+    .bdt-contact-item a {
+        overflow-wrap: anywhere;
+    }
+
+    .bdt-cta-inner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 22px;
+    }
+
+    .bdt-footer-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .bdt-footer-grid > div:first-child {
+        grid-column: auto !important;
+    }
+
+    .bdt-footer-bottom {
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .bdt-section {
+        padding: 68px 0;
+    }
+
+    .bdt-section-title {
+        font-size: clamp(29px, 8vw, 40px);
+    }
+
+    .bdt-section-subtitle {
+        font-size: 16px;
+        line-height: 1.65;
+        margin-bottom: 38px;
+    }
+
+    .bdt-hero {
+        padding-top: 125px;
+        padding-bottom: 65px;
+    }
+
+    .bdt-hero-kicker {
+        max-width: 100%;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .bdt-hero h1 {
+        font-size: clamp(34px, 10vw, 48px) !important;
+        line-height: 1.05;
+    }
+
+    .bdt-hero-text {
+        font-size: 16px !important;
+        line-height: 1.6;
+    }
+
+    .bdt-focus-item {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .bdt-focus-icon {
+        flex-basis: 48px;
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .bdt-feature-card {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .bdt-feature-card h3 {
+        font-size: 22px;
+    }
+
+    .bdt-feature-card p {
+        font-size: 15px;
+    }
+
+    .bdt-business-box {
+        padding: 21px;
+    }
+
+    .bdt-form {
+        border-radius: 18px;
+        padding: 22px 17px !important;
+    }
+
+    .bdt-form-group input,
+    .bdt-form-group textarea {
+        max-width: 100%;
+    }
+
+    #dynamic-reference-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .reference-card img {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+    }
+
+    .modal-content {
+        width: calc(100% - 24px);
+        max-width: none;
+        max-height: calc(100vh - 24px);
+        padding: 22px 17px;
+        border-radius: 14px;
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+        padding-right: 38px;
+    }
+
+    .modal-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-gallery img {
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+
+    .modal-close {
+        top: 12px !important;
+        right: 14px !important;
+        font-size: 30px !important;
+    }
+
+    .bdt-back-top {
+        right: 14px;
+        bottom: 14px;
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .bdt-footer-bottom {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .bdt-container {
+        width: calc(100% - 22px);
+    }
+
+    .bdt-logo img {
+        width: 128px;
+    }
+
+    .bdt-menu-button {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px;
+        min-height: 42px;
+    }
+
+    .bdt-hero {
+        padding-top: 115px;
+    }
+
+    .bdt-hero h1 {
+        font-size: 32px !important;
+    }
+
+    .bdt-feature-card,
+    .bdt-secondary-card,
+    .bdt-business-box,
+    .bdt-why-card {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .bdt-form {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
